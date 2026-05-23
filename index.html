@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentation Wrapper</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Slide Deck</h1>
+      </div>
+      <nav class="slide-list" id="slideList"></nav>
+      <div class="nav-actions">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="content-header">
+        <h2 id="slideTitle">Loading slide...</h2>
+        <p id="slideDescription">Use the navigation menu or buttons to move between slides.</p>
+      </header>
+      <section class="slide-frame-wrapper">
+        <iframe id="slideFrame" src="" title="Slide content"></iframe>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
