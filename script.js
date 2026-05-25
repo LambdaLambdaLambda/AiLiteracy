@@ -21,6 +21,7 @@ Each nesting level represents a section/subsection that
 */
 let tree_structure = null;
 let currentSlideId = null;
+let currentFatherId = null;
 
 async function loadTreeStructure() {
   const response = await fetch('/api/tree');
@@ -30,6 +31,7 @@ async function loadTreeStructure() {
 
   tree_structure = await response.json();
   currentSlideId = tree_structure.id;
+  currentFatherId = tree_structure.id;
   renderCurrent();
 }
 
@@ -42,6 +44,8 @@ const levelNav = document.getElementById("levelNav");
 const slideTitle = document.getElementById("slideTitle");
 const slideDescription = document.getElementById("slideDescription");
 const slideFrame = document.getElementById("slideFrame");
+const upBtn = document.getElementById("upBtn");
+const downBtn = document.getElementById("downBtn");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
@@ -68,9 +72,57 @@ function getSiblings(node, parent) {
   return parent.slides || [];
 }
 
+function getParentNode(node) {
+  const found = findById(node.id);
+  return found ? found.parent : null;
+}
+
+function isAncestor(ancestor, node) {
+  if (!ancestor || !node) return false;
+  if (ancestor.id === node.id) return true;
+  return !!findNodeAndParent(n => n.id === node.id, ancestor);
+}
+
 function setCurrentById(id) {
   currentSlideId = id;
+  const current = findById(id)?.node;
+  const parent = current ? findById(id)?.parent : null;
+  if (!current) {
+    renderCurrent();
+    return;
+  }
+
+  if (!currentFatherId) {
+    currentFatherId = parent ? parent.id : current.id;
+  } else {
+    const currentFather = findById(currentFatherId)?.node;
+    if (!currentFather || !isAncestor(currentFather, current)) {
+      currentFatherId = parent ? parent.id : current.id;
+    }
+  }
+
   renderCurrent();
+}
+
+function setCurrentFatherAndSlide(id) {
+  currentFatherId = id;
+  currentSlideId = id;
+  renderCurrent();
+}
+
+function setCurrentFather(id) {
+  currentFatherId = id;
+  renderCurrent();
+}
+
+function getFatherNode() {
+  const current = findById(currentSlideId)?.node;
+  const parent = current ? getParentNode(current) : null;
+  const father = findById(currentFatherId)?.node;
+  if (father && current && isAncestor(father, current)) {
+    return father;
+  }
+  return parent || current || tree_structure;
 }
 
 function renderCurrent() {
@@ -80,62 +132,73 @@ function renderCurrent() {
     return;
   }
 
-  const found = findById(currentSlideId) || { node: tree_structure, parent: null };
-  const node = found.node;
-  const parent = found.parent;
-  const slideSrc = getSlidePath(node);
+  const currentResult = findById(currentSlideId) || { node: tree_structure, parent: null };
+  const currentNode = currentResult.node;
+  const currentParent = currentResult.parent;
+  const slideSrc = getSlidePath(currentNode);
+  const fatherNode = getFatherNode();
+  const fatherChildren = fatherNode.slides || [];
 
-  slideTitle.textContent = node?.title || '';
-  slideDescription.textContent = node?.description || '';
+  slideTitle.textContent = currentNode?.title || '';
+  slideDescription.textContent = currentNode?.description || '';
   slideFrame.src = slideSrc;
 
-  const siblings = getSiblings(node, parent);
-  const index = siblings.findIndex(s => s.id === node.id);
+  const siblings = currentParent ? getSiblings(currentNode, currentParent) : [tree_structure];
+  const index = siblings.findIndex(s => s.id === currentNode.id);
 
-  levelNav.innerHTML = '';
-
-  const upBtn = document.createElement('button');
-  upBtn.type = 'button';
-  upBtn.textContent = 'Up';
-  if (parent && parent.id) {
-    upBtn.addEventListener('click', () => setCurrentById(parent.id));
-  } else {
-    upBtn.disabled = true;
-  }
-  levelNav.appendChild(upBtn);
-
-  const prevLevelBtn = document.createElement('button');
-  prevLevelBtn.type = 'button';
-  prevLevelBtn.textContent = 'Prev';
-  if (index > 0) {
-    prevLevelBtn.addEventListener('click', () => setCurrentById(siblings[index - 1].id));
-  } else {
-    prevLevelBtn.disabled = true;
-  }
-  levelNav.appendChild(prevLevelBtn);
-
-  const nextLevelBtn = document.createElement('button');
-  nextLevelBtn.type = 'button';
-  nextLevelBtn.textContent = 'Next';
-  if (index >= 0 && index < siblings.length - 1) {
-    nextLevelBtn.addEventListener('click', () => setCurrentById(siblings[index + 1].id));
-  } else {
-    nextLevelBtn.disabled = true;
-  }
-  levelNav.appendChild(nextLevelBtn);
-
+  upBtn.disabled = !currentParent;
+  downBtn.disabled = !(currentNode.slides?.length && currentSlideId !== currentFatherId);
   prevBtn.disabled = !(index > 0);
   nextBtn.disabled = !(index >= 0 && index < siblings.length - 1);
-  prevBtn.onclick = () => { if (index > 0) setCurrentById(siblings[index - 1].id); };
-  nextBtn.onclick = () => { if (index >= 0 && index < siblings.length - 1) setCurrentById(siblings[index + 1].id); };
+
+  upBtn.onclick = () => {
+    if (currentParent) {
+      setCurrentFatherAndSlide(currentParent.id);
+    }
+  };
+  downBtn.onclick = () => {
+    if (currentNode.slides?.length && currentSlideId !== currentFatherId) {
+      setCurrentFather(currentNode.id);
+    }
+  };
+  prevBtn.onclick = () => {
+    if (index > 0) {
+      setCurrentById(siblings[index - 1].id);
+    }
+  };
+  nextBtn.onclick = () => {
+    if (index >= 0 && index < siblings.length - 1) {
+      setCurrentById(siblings[index + 1].id);
+    }
+  };
 
   slideList.innerHTML = '';
-  siblings.forEach((s, i) => {
+
+  const fatherLabel = document.createElement('div');
+  fatherLabel.className = 'slide-tree-label';
+  fatherLabel.textContent = 'Father';
+  slideList.appendChild(fatherLabel);
+
+  const fatherItem = document.createElement('button');
+  fatherItem.type = 'button';
+  fatherItem.className = 'slide-item father-item' + (fatherNode.id === currentNode.id ? ' active' : '');
+  fatherItem.textContent = fatherNode.title;
+  fatherItem.addEventListener('click', () => setCurrentFatherAndSlide(fatherNode.id));
+  slideList.appendChild(fatherItem);
+
+  if (fatherChildren.length) {
+    const childrenLabel = document.createElement('div');
+    childrenLabel.className = 'slide-tree-label';
+    childrenLabel.textContent = 'Children';
+    slideList.appendChild(childrenLabel);
+  }
+
+  fatherChildren.forEach((child, i) => {
     const item = document.createElement('button');
     item.type = 'button';
-    item.className = 'slide-item' + (i === index ? ' active' : '');
-    item.textContent = `${i + 1}. ${s.title}`;
-    item.addEventListener('click', () => setCurrentById(s.id));
+    item.className = 'slide-item child-item' + (child.id === currentNode.id ? ' active' : '');
+    item.textContent = `${i + 1}. ${child.title}`;
+    item.addEventListener('click', () => setCurrentFatherAndSlide(child.id));
     slideList.appendChild(item);
   });
 }
