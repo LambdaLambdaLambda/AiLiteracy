@@ -4,21 +4,6 @@
  External slides can use a local slide.html that contains an iframe.
 */
 
-/*
-The variable #sym:tree_structure holds the hierarchical organizazion of the entire presentation.
- It is structured as a tree, where each node is a record with the following fields:
-- title: the title of the slide
-- id: a unique identifier for the slide (short UUID format)
-- src: the source URL or path for the slide content. Can be an HTML file inside a subfolder or an external website. 
-       If it is a folder it must be specified as "folder_name/slide.html" and the file "slide.html" must be present inside the folder "folder_name".
-       In that case the subfolder contains all the assets (images, videos, etc.) needed for the slide.
-- slides: an array of child slides that belong to this section (optional)
- 
-Each nesting level represents a section/subsection that 
- starts with the slide specified in field "entry_point". 
- Each section consists of a list of slides to be presented in 
- the order specified in the field "other_slides". 
-*/
 let tree_structure = null;
 let currentSlideId = null;
 let currentFatherId = null;
@@ -37,6 +22,17 @@ async function loadTreeStructure() {
 
 function getSlidePath(node) {
   return node.path || node.src || '';
+}
+
+function getNavLabel(node) {
+  if (!node) return '';
+  if (node.path) {
+    const parts = node.path.split('/');
+    if (parts.length >= 2) {
+      return parts[parts.length - 2];
+    }
+  }
+  return node.title || '';
 }
 
 const slideList = document.getElementById("slideList");
@@ -176,20 +172,20 @@ function renderCurrent() {
 
   const fatherLabel = document.createElement('div');
   fatherLabel.className = 'slide-tree-label';
-  fatherLabel.textContent = 'Father';
+  fatherLabel.textContent = 'Sezione';
   slideList.appendChild(fatherLabel);
 
   const fatherItem = document.createElement('button');
   fatherItem.type = 'button';
   fatherItem.className = 'slide-item father-item' + (fatherNode.id === currentNode.id ? ' active' : '');
-  fatherItem.textContent = fatherNode.title;
+  fatherItem.textContent = getNavLabel(fatherNode);
   fatherItem.addEventListener('click', () => setCurrentFatherAndSlide(fatherNode.id));
   slideList.appendChild(fatherItem);
 
   if (fatherChildren.length) {
     const childrenLabel = document.createElement('div');
     childrenLabel.className = 'slide-tree-label';
-    childrenLabel.textContent = 'Children';
+    childrenLabel.textContent = 'Slides';
     slideList.appendChild(childrenLabel);
   }
 
@@ -197,7 +193,7 @@ function renderCurrent() {
     const item = document.createElement('button');
     item.type = 'button';
     item.className = 'slide-item child-item' + (child.id === currentNode.id ? ' active' : '');
-    item.textContent = `${i + 1}. ${child.title}`;
+    item.textContent = `${i + 1}. ${getNavLabel(child)}`;
     item.addEventListener('click', () => setCurrentFatherAndSlide(child.id));
     slideList.appendChild(item);
   });

@@ -8,6 +8,8 @@ const ROOT_DIR = path.join(__dirname);
 const IGNORED_DIRS = new Set(['.git', 'node_modules', '.DS_Store', '__MACOSX']);
 const SLIDE_FILE = 'slide.html';
 
+app.use('/vendor', express.static(path.join(ROOT_DIR, 'node_modules')));
+
 function normalizeTitle(name) {
   return name
     .replace(/[-_]+/g, ' ')
@@ -87,7 +89,7 @@ async function buildTreeStructure() {
     .filter(entry => entry.isDirectory() && entry.name !== 'start' && !IGNORED_DIRS.has(entry.name) && !entry.name.startsWith('.'))
     .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
 
-  const slides = [];
+  const slides = startNode.slides ? [...startNode.slides] : [];
   for (const section of sectionDirs) {
     const sectionNode = await buildSlideNode(path.join(ROOT_DIR, section.name), section.name);
     if (sectionNode) slides.push(sectionNode);
