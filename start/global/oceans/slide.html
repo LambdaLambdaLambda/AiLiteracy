@@ -1,71 +1,42 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="slide-title" content="Global Oceans" />
-    <meta name="short-title" content="Global Oceans" />
 
-    <title>Global Oceans</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <style>
-      html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
-      #game-root { position: relative; width: 100%; height: 100%; }
-      #backgroundCanvas, #canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; }
-      #container-react { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-      .ocean-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1rem; color: #fff; font-family: system-ui, sans-serif; text-align: center; pointer-events: none; }
-    </style>
-  </head>
-  <body>
-    <div id="game-root">
-      <canvas id="backgroundCanvas"></canvas>
-      <canvas id="canvas"></canvas>
-      <div id="container-react"></div>
-      <div class="ocean-fallback">Loading AI for Oceans...</div>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="slide-title" content="AI for oceans" />
+  <meta name="short-title" content="AI for oceans" />
 
-    <script src="/vendor/react/umd/react.production.min.js"></script>
-    <script src="/vendor/react-dom/umd/react-dom.production.min.js"></script>
-    <script src="/vendor/lodash/lodash.js"></script>
-    <script src="/vendor/radium/dist/radium.js"></script>
-    <script>
-      window['react-dom'] = ReactDOM;
-      window.react = React;
-      window.lodash = _;
-      window.radium = Radium;
-    </script>
-    <script src="/vendor/@code-dot-org/ml-activities/dist/main.js"></script>
-    <script>
-      function initOceansGame() {
-        if (typeof initAll !== 'function') {
-          console.error('AI for Oceans initAll not available');
-          return;
-        }
+  <title>AI for oceans</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      background: transparent;
+    }
 
-        var soundRegistry = {};
+    body {
+      overflow: hidden;
+    }
 
-        initAll({
-          canvas: document.getElementById('canvas'),
-          backgroundCanvas: document.getElementById('backgroundCanvas'),
-          appMode: 'fishvtrash',
-          guides: true,
-          onContinue: function () {
-            console.log('AI for Oceans continue');
-          },
-          i18n: {},
-          registerSound: function (sound) {
-            soundRegistry[sound.id] = sound.mp3;
-          },
-          playSound: function (soundId) {
-            console.log('AI for Oceans playSound:', soundId);
-          }
-        });
-      }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
 
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initOceansGame);
-      } else {
-        initOceansGame();
-      }
-    </script>
-  </body>
+
+<body class="external-slide">
+  <iframe src="https://8080--019e64e2-100e-77e6-bd5b-db29d0185524.eu-central-1-01.gitpod.dev/" title="AI for oceans"></iframe>
+  <!-- Fallback se non funziona link qui sopra -->
+   <!-- il progetto è qui https://app.gitpod.io/details/019e64e2-100e-77e6-bd5b-db29d0185524  -->
+  <!-- <iframe src="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/2" title="AI for oceans"></iframe> -->
+</body>
+
 </html>
