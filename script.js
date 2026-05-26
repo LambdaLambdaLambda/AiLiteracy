@@ -39,10 +39,11 @@ const slideList = document.getElementById('slideList');
 const slideTitle = document.getElementById('slideTitle');
 const slideDescription = document.getElementById('slideDescription');
 const slideFrame = document.getElementById('slideFrame');
-const upBtn = document.getElementById('upBtn');
-const downBtn = document.getElementById('downBtn');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+
+let upBtn = null;
+let downBtn = null;
 
 function findNodeAndParent(predicate, node = treeStructure, parent = null) {
   if (!node) return null;
@@ -104,23 +105,8 @@ function renderCurrent() {
   slideDescription.textContent = highlightedNode?.description || '';
   slideFrame.src = getSlidePath(highlightedNode);
 
-  upBtn.disabled = !highlightedParent;
-  downBtn.disabled = selectedFolderId === highlightedFolderId;
   prevBtn.disabled = siblings.length <= 1;
   nextBtn.disabled = siblings.length <= 1;
-
-  upBtn.onclick = () => {
-    if (!highlightedParent) return;
-    selectedFolderId = highlightedParent.id;
-    highlightedFolderId = highlightedParent.id;
-    renderCurrent();
-  };
-
-  downBtn.onclick = () => {
-    if (selectedFolderId === highlightedFolderId) return;
-    selectedFolderId = highlightedFolderId;
-    renderCurrent();
-  };
 
   prevBtn.onclick = () => {
     if (siblings.length <= 1) return;
@@ -138,12 +124,35 @@ function renderCurrent() {
 
   slideList.innerHTML = '';
 
+  // Create label container with upBtn
+  const labelContainer = document.createElement('div');
+  labelContainer.className = 'slide-tree-container';
+  
   const selectedLabel = document.createElement('div');
   selectedLabel.className = 'slide-tree-label';
   selectedLabel.textContent = getNavLabel(selectedNode);
-  slideList.appendChild(selectedLabel);
+  labelContainer.appendChild(selectedLabel);
 
+  // Create upBtn and add it to the label container
+  upBtn = document.createElement('button');
+  upBtn.id = 'upBtn';
+  upBtn.textContent = 'Up';
+  upBtn.disabled = !highlightedParent;
+  upBtn.onclick = () => {
+    if (!highlightedParent) return;
+    selectedFolderId = highlightedParent.id;
+    highlightedFolderId = highlightedParent.id;
+    renderCurrent();
+  };
+  labelContainer.appendChild(upBtn);
+  
+  slideList.appendChild(labelContainer);
+
+  // Create slide items with downBtn for items with children
   selectedChildren.forEach(child => {
+    const itemContainer = document.createElement('div');
+    itemContainer.className = 'slide-item-container';
+    
     const item = document.createElement('button');
     item.type = 'button';
     item.className = 'slide-item' + (child.id === highlightedFolderId ? ' active' : '');
@@ -152,7 +161,23 @@ function renderCurrent() {
       highlightedFolderId = child.id;
       renderCurrent();
     });
-    slideList.appendChild(item);
+    itemContainer.appendChild(item);
+
+    // Add downBtn if this child has subfolders
+    const childSubfolders = getChildren(child);
+    if (childSubfolders && childSubfolders.length > 0) {
+      downBtn = document.createElement('button');
+      downBtn.className = 'down-btn';
+      downBtn.textContent = 'Down';
+      downBtn.onclick = (e) => {
+        e.stopPropagation();
+        selectedFolderId = child.id;
+        renderCurrent();
+      };
+      itemContainer.appendChild(downBtn);
+    }
+    
+    slideList.appendChild(itemContainer);
   });
 }
 

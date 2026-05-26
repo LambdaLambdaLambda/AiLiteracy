@@ -1,0 +1,13 @@
+Apply the following modifications to the 
+ element <aside class="sidebar">.
+
+The buttons with id="upBtn", and="upBtn" should be displayed just on the right of the section title written inside the div with class="slide-tree-label". Remove the button id="downBtn" from that area (in the following instructions I tell you where to move it)
+
+For every element 
+ <button type="button" class="slide-item"> ... </button> inside <nav class="slide-list" id="slideList">, if the element corresponds to a folder with subfolders (and hence it can be a father node itself) display the down button (id="downBtn") just on the side of the title contained inside the element <button type="button" class="slide-item">
+
+
+
+
+
+
