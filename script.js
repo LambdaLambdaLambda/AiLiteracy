@@ -136,7 +136,7 @@ function renderCurrent() {
   // Create upBtn and add it to the label container
   upBtn = document.createElement('button');
   upBtn.id = 'upBtn';
-  upBtn.textContent = 'Up';
+  upBtn.innerHTML = '&uarr;';
   upBtn.disabled = !highlightedParent;
   upBtn.onclick = () => {
     if (!highlightedParent) return;
@@ -168,7 +168,7 @@ function renderCurrent() {
     if (childSubfolders && childSubfolders.length > 0) {
       downBtn = document.createElement('button');
       downBtn.className = 'down-btn';
-      downBtn.textContent = 'Down';
+      downBtn.innerHTML = '&darr;';
       downBtn.onclick = (e) => {
         e.stopPropagation();
         selectedFolderId = child.id;
