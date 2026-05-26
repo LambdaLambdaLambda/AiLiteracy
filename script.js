@@ -4,9 +4,9 @@
  External slides can use a local slide.html that contains an iframe.
 */
 
-let tree_structure = null;
-let currentSlideId = null;
-let currentFatherId = null;
+let treeStructure = null;
+let selectedFolderId = null;
+let highlightedFolderId = null;
 
 async function loadTreeStructure() {
   const response = await fetch('/api/tree');
@@ -14,9 +14,9 @@ async function loadTreeStructure() {
     throw new Error(`Unable to load tree structure: ${response.status} ${response.statusText}`);
   }
 
-  tree_structure = await response.json();
-  currentSlideId = tree_structure.id;
-  currentFatherId = tree_structure.id;
+  treeStructure = await response.json();
+  selectedFolderId = treeStructure.id;
+  highlightedFolderId = treeStructure.id;
   renderCurrent();
 }
 
@@ -35,18 +35,16 @@ function getNavLabel(node) {
   return node.title || '';
 }
 
-const slideList = document.getElementById("slideList");
-const levelNav = document.getElementById("levelNav");
-const slideTitle = document.getElementById("slideTitle");
-const slideDescription = document.getElementById("slideDescription");
-const slideFrame = document.getElementById("slideFrame");
-const upBtn = document.getElementById("upBtn");
-const downBtn = document.getElementById("downBtn");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+const slideList = document.getElementById('slideList');
+const slideTitle = document.getElementById('slideTitle');
+const slideDescription = document.getElementById('slideDescription');
+const slideFrame = document.getElementById('slideFrame');
+const upBtn = document.getElementById('upBtn');
+const downBtn = document.getElementById('downBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-// Find a node and its parent by predicate
-function findNodeAndParent(predicate, node = tree_structure, parent = null) {
+function findNodeAndParent(predicate, node = treeStructure, parent = null) {
   if (!node) return null;
   if (predicate(node)) return { node, parent };
   if (!node.slides) return null;
@@ -61,145 +59,103 @@ function findById(id) {
   return findNodeAndParent(n => n.id === id);
 }
 
-function getSiblings(node, parent) {
-  if (!parent) {
-    return tree_structure?.slides || [];
-  }
-  return parent.slides || [];
-}
-
 function getParentNode(node) {
   const found = findById(node.id);
   return found ? found.parent : null;
 }
 
-function isAncestor(ancestor, node) {
-  if (!ancestor || !node) return false;
-  if (ancestor.id === node.id) return true;
-  return !!findNodeAndParent(n => n.id === node.id, ancestor);
+function getSelectedNode() {
+  const found = findById(selectedFolderId);
+  return found ? found.node : treeStructure;
 }
 
-function setCurrentById(id) {
-  currentSlideId = id;
-  const current = findById(id)?.node;
-  const parent = current ? findById(id)?.parent : null;
-  if (!current) {
-    renderCurrent();
-    return;
+function getHighlightedNode() {
+  const found = findById(highlightedFolderId);
+  return found ? found.node : treeStructure;
+}
+
+function getChildren(node) {
+  return node?.slides || [];
+}
+
+function getSiblings(node) {
+  const parent = getParentNode(node);
+  if (!parent) {
+    return [treeStructure];
   }
-
-  if (!currentFatherId) {
-    currentFatherId = parent ? parent.id : current.id;
-  } else {
-    const currentFather = findById(currentFatherId)?.node;
-    if (!currentFather || !isAncestor(currentFather, current)) {
-      currentFatherId = parent ? parent.id : current.id;
-    }
-  }
-
-  renderCurrent();
-}
-
-function setCurrentFatherAndSlide(id) {
-  currentFatherId = id;
-  currentSlideId = id;
-  renderCurrent();
-}
-
-function setCurrentFather(id) {
-  currentFatherId = id;
-  renderCurrent();
-}
-
-function getFatherNode() {
-  const current = findById(currentSlideId)?.node;
-  const parent = current ? getParentNode(current) : null;
-  const father = findById(currentFatherId)?.node;
-  if (father && current && isAncestor(father, current)) {
-    return father;
-  }
-  return parent || current || tree_structure;
+  return parent.slides || [];
 }
 
 function renderCurrent() {
-  if (!tree_structure) {
+  if (!treeStructure) {
     slideTitle.textContent = 'Loading...';
     slideDescription.textContent = 'Loading slide list...';
     return;
   }
 
-  const currentResult = findById(currentSlideId) || { node: tree_structure, parent: null };
-  const currentNode = currentResult.node;
-  const currentParent = currentResult.parent;
-  const slideSrc = getSlidePath(currentNode);
-  const fatherNode = getFatherNode();
-  const fatherChildren = fatherNode.slides || [];
+  const selectedNode = getSelectedNode();
+  const highlightedNode = getHighlightedNode();
+  const selectedChildren = getChildren(selectedNode);
+  const highlightedParent = getParentNode(highlightedNode);
+  const siblings = getSiblings(highlightedNode);
+  const highlightedIndex = siblings.findIndex(s => s.id === highlightedNode.id);
 
-  slideTitle.textContent = currentNode?.title || '';
-  slideDescription.textContent = currentNode?.description || '';
-  slideFrame.src = slideSrc;
+  slideTitle.textContent = highlightedNode?.title || '';
+  slideDescription.textContent = highlightedNode?.description || '';
+  slideFrame.src = getSlidePath(highlightedNode);
 
-  const siblings = currentParent ? getSiblings(currentNode, currentParent) : [tree_structure];
-  const index = siblings.findIndex(s => s.id === currentNode.id);
-
-  upBtn.disabled = !currentParent;
-  downBtn.disabled = !(currentNode.slides?.length && currentSlideId !== currentFatherId);
-  prevBtn.disabled = !(index > 0);
-  nextBtn.disabled = !(index >= 0 && index < siblings.length - 1);
+  upBtn.disabled = !highlightedParent;
+  downBtn.disabled = selectedFolderId === highlightedFolderId;
+  prevBtn.disabled = siblings.length <= 1;
+  nextBtn.disabled = siblings.length <= 1;
 
   upBtn.onclick = () => {
-    if (currentParent) {
-      setCurrentFatherAndSlide(currentParent.id);
-    }
+    if (!highlightedParent) return;
+    selectedFolderId = highlightedParent.id;
+    highlightedFolderId = highlightedParent.id;
+    renderCurrent();
   };
+
   downBtn.onclick = () => {
-    if (currentNode.slides?.length && currentSlideId !== currentFatherId) {
-      setCurrentFather(currentNode.id);
-    }
+    if (selectedFolderId === highlightedFolderId) return;
+    selectedFolderId = highlightedFolderId;
+    renderCurrent();
   };
+
   prevBtn.onclick = () => {
-    if (index > 0) {
-      setCurrentById(siblings[index - 1].id);
-    }
+    if (siblings.length <= 1) return;
+    const previousIndex = (highlightedIndex - 1 + siblings.length) % siblings.length;
+    highlightedFolderId = siblings[previousIndex].id;
+    renderCurrent();
   };
+
   nextBtn.onclick = () => {
-    if (index >= 0 && index < siblings.length - 1) {
-      setCurrentById(siblings[index + 1].id);
-    }
+    if (siblings.length <= 1) return;
+    const nextIndex = (highlightedIndex + 1) % siblings.length;
+    highlightedFolderId = siblings[nextIndex].id;
+    renderCurrent();
   };
 
   slideList.innerHTML = '';
 
-  const fatherLabel = document.createElement('div');
-  fatherLabel.className = 'slide-tree-label';
-  fatherLabel.textContent = 'Sezione';
-  slideList.appendChild(fatherLabel);
+  const selectedLabel = document.createElement('div');
+  selectedLabel.className = 'slide-tree-label';
+  selectedLabel.textContent = getNavLabel(selectedNode);
+  slideList.appendChild(selectedLabel);
 
-  const fatherItem = document.createElement('button');
-  fatherItem.type = 'button';
-  fatherItem.className = 'slide-item father-item' + (fatherNode.id === currentNode.id ? ' active' : '');
-  fatherItem.textContent = getNavLabel(fatherNode);
-  fatherItem.addEventListener('click', () => setCurrentFatherAndSlide(fatherNode.id));
-  slideList.appendChild(fatherItem);
-
-  if (fatherChildren.length) {
-    const childrenLabel = document.createElement('div');
-    childrenLabel.className = 'slide-tree-label';
-    childrenLabel.textContent = 'Slides';
-    slideList.appendChild(childrenLabel);
-  }
-
-  fatherChildren.forEach((child, i) => {
+  selectedChildren.forEach(child => {
     const item = document.createElement('button');
     item.type = 'button';
-    item.className = 'slide-item child-item' + (child.id === currentNode.id ? ' active' : '');
-    item.textContent = `${i + 1}. ${getNavLabel(child)}`;
-    item.addEventListener('click', () => setCurrentFatherAndSlide(child.id));
+    item.className = 'slide-item' + (child.id === highlightedFolderId ? ' active' : '');
+    item.textContent = getNavLabel(child);
+    item.addEventListener('click', () => {
+      highlightedFolderId = child.id;
+      renderCurrent();
+    });
     slideList.appendChild(item);
   });
 }
 
-// Initialize
 window.addEventListener('DOMContentLoaded', () => {
   loadTreeStructure().catch(error => {
     slideTitle.textContent = 'Unable to load presentation';
