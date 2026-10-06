@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3. Equilibrio Istituzionale e Cooperazione Internazionale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="viewport">
+  <main class="slide">
+    <img class="logo-eft" src="assets/eft-veneto.png" alt="Équipe Formativa Veneto">
+    <h1 class="slide-title">Equilibrio Istituzionale e Cooperazione Internazionale</h1>
+    <div class="line-top"></div>
+    <a class="nav nav-prev" href="slide-02.html" aria-label="Pagina precedente"><svg viewBox="0 0 24 24"><polyline points="15,4 7,12 15,20"/></svg></a>
+    <a class="nav nav-next" href="slide-04.html" aria-label="Pagina successiva"><svg viewBox="0 0 24 24"><polyline points="9,4 17,12 9,20"/></svg></a>
+    <div class="content">
+      <div class="body">
+
+<div class="panels" style="font-size:calc(8*var(--pt))">
+ <section class="panel" style="font-size:calc(8*var(--pt))"><h3>L' Equilibrio Istituzionale nei 4 Organi UE</h3><div class="in">
+  <span class="h">Principio di non-gerarchia e bilanciamento:</span>
+  <ul>
+   <li><strong>Indirizzo Strategico vs. Esecutivo:</strong> Il <strong>Consiglio europeo</strong> fissa le priorità politiche generali. Non esercita funzioni legislative né si sostituisce alla Commissione o ai co-legislatori.</li>
+   <li><strong>Iniziativa vs. Potere Legislativo:</strong> La <strong>Commissione europea</strong> ha il monopolio dell'iniziativa legislativa (propone le leggi), ma non può approvarle autonomamente.</li>
+   <li><strong>Parità tra i Co-legislatori:</strong> <strong>Parlamento europeo</strong> (cittadini) e <strong>Consiglio dell'UE</strong> (governi) operano sullo stesso piano. Un atto (GDPR, AI Act) richiede l'approvazione congiunta di entrambi.</li>
+  </ul></div></section>
+ <section class="panel" style="font-size:calc(8*var(--pt))"><h3 class="alt">Relazione con il Consiglio d'Europa (Organo Esterno)</h3><div class="in">
+  <span class="h">Complementarità senza subordinazione gerarchica:</span>
+  <ul>
+   <li><strong>Standard sui Diritti Umani:</strong> Organizzazione esterna (46 Paesi) che stabilisce tutele fondamentali continentali tramite CEDU e Convenzione 108.</li>
+   <li><strong>Recepimento nell'Ordinamento UE:</strong> L'UE assicura che le proprie normative civili e digitali (GDPR, AI Act) siano pienamente coerenti con i principi del Consiglio d'Europa.</li>
+   <li><strong>Valutazione di Impatto sull'IA:</strong> Metodologie come <strong>HUDERIA</strong> e la Convenzione quadro sull'IA (2024) integrano i requisiti UE nelle scuole.</li>
+  </ul></div></section>
+</div>
+<div class="mm-box" style="flex:1;min-height:0"><div class="cap">Schema Sintetico dell'Architettura Istituzionale:</div>
+<div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:calc(2*var(--pt))">
+<div class="mm grow" style=""><pre class="mermaid">
+%%{init: {"themeVariables":{"fontSize":"18px"},"flowchart":{"wrappingWidth":190,"nodeSpacing":22,"padding":6}}}%%
+graph TD
+  subgraph UE[" "]
+    direction LR
+    CE["Consiglio Europeo<br/>(Indirizzo)"] --> COM["Commissione UE<br/>(Iniziativa/Proposte)"]
+    COM --> PE["Parlamento UE"]
+    PE <-->|"Co-legislatori paritari"| CU["Consiglio dell'UE"]
+  end
+  style UE fill:none,stroke:none
+</pre></div><div class="mm grow" style=""><pre class="mermaid">
+%%{init: {"themeVariables":{"fontSize":"18px"},"flowchart":{"wrappingWidth":560,"nodeSpacing":22,"padding":6}}}%%
+graph TD
+  subgraph CD[" "]
+    direction LR
+    COE["Consiglio d'Europa<br/>(Organizzazione esterna, 46 Paesi)"] --> RIF["Stabilisce la cornice internazionale sui diritti umani e IA che l'UE rispetta e integra"]
+  end
+  style CD fill:none,stroke:none
+</pre></div></div></div>
+      </div>
+    </div>
+    <div class="line-bottom"></div>
+    <img class="footer-banner" src="assets/futura-inlinea.png" alt="Futura – La scuola per l'Italia di domani · Finanziato dall'Unione europea · Ministero dell'Istruzione e del Merito · Italia domani">
+  </main>
+</div>
+<script src="vendor/mermaid.min.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
