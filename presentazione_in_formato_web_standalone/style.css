@@ -1,0 +1,158 @@
+/* ==========================================================
+   Linee guida IA e Privacy nella Scuola Italiana
+   Stile condiviso da tutte le pagine (una pagina = una slide)
+   Slide di riferimento: 16:9 = 720pt x 405pt (10in x 5.625in)
+   Tutte le misure sono espresse in "pt della slide" tramite --pt,
+   così 24pt / 16pt / 8pt restano proporzionali a schermo intero.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Merriweather:wght@700&display=swap');
+
+:root {
+  /* Palette ricavata dalla presentazione */
+  --navy:  #1F3A5F;   /* titoli, intestazioni card */
+  --blue:  #2F5D8A;   /* accenti, frecce, grassetti */
+  --text:  #333333;   /* testo corrente */
+  --ink:   #1F2937;
+  --tint:  #EBF2FA;   /* sfondo box di sintesi */
+  --line:  #D5DCE5;   /* bordi card */
+  --gold:  #B79B49;   /* linea superiore */
+  --blue-line: #2E5D8A; /* linea inferiore */
+  --white: #FFFFFF;
+
+  --font-title: 'Merriweather', Georgia, serif;
+  --font-body:  'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--white); overflow: hidden; }
+
+/* ---------- Palco a schermo intero ---------- */
+.viewport {
+  width: 100vw; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--white);
+}
+
+/* La slide occupa il massimo spazio mantenendo il 16:9 */
+.slide {
+  --pt: calc(100cqw / 720);          /* 1pt di slide */
+  container-type: size;
+  position: relative;
+  width: min(100vw, calc(100vh * 16 / 9));
+  aspect-ratio: 16 / 9;
+  background: var(--white);          /* sfondo sempre bianco */
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* ---------- Elementi grafici fissi ---------- */
+/* Fascia alta: logo EFT Veneto (alto a destra) + linea oro sotto di esso */
+.logo-eft {
+  position: absolute;
+  right: calc(26 * var(--pt)); top: calc(6 * var(--pt));
+  height: calc(48 * var(--pt)); width: auto;
+}
+.line-top {                           /* linea oro, tutta la larghezza */
+  position: absolute; left: 0; right: 0; top: calc(62 * var(--pt));
+  height: 3px; background: var(--gold);
+}
+/* Fascia bassa: linea blu sopra il banner FUTURA */
+.line-bottom {                        /* linea blu, tutta la larghezza */
+  position: absolute; left: 0; right: 0; bottom: calc(38 * var(--pt));
+  height: 3px; background: var(--blue-line);
+}
+.footer-banner {
+  position: absolute; left: calc(10 * var(--pt)); bottom: calc(5 * var(--pt));
+  width: calc(100% - 20 * var(--pt)); height: auto;
+}
+
+/* ---------- Area contenuto: compresa tra le due linee ---------- */
+.content {
+  position: absolute;
+  left: calc(46 * var(--pt)); right: calc(46 * var(--pt));
+  top: calc(62 * var(--pt) + 3px + 8 * var(--pt));
+  bottom: calc(38 * var(--pt) + 3px + 8 * var(--pt));
+  display: flex; flex-direction: column; gap: calc(8 * var(--pt));
+  min-height: 0;
+}
+
+/* ---------- Tipografia ---------- */
+.slide-title {                        /* sempre sopra la linea oro, a sinistra del logo */
+  position: absolute; left: calc(46 * var(--pt)); top: 0;
+  right: calc(26 * var(--pt) + 99 * var(--pt) + 16 * var(--pt));
+  height: calc(62 * var(--pt)); padding-bottom: calc(6 * var(--pt));
+  display: flex; align-items: flex-end;
+  margin: 0;
+  font-family: var(--font-title); font-weight: 700;
+  font-size: calc(24 * var(--pt)); line-height: 1.15;
+  color: var(--navy);
+}
+.body { flex: 1; min-height: 0; font-size: calc(12 * var(--pt)); line-height: 1.35; }
+.fs-16 { font-size: calc(16 * var(--pt)); }
+.fs-14 { font-size: calc(14 * var(--pt)); }
+.fs-12 { font-size: calc(12 * var(--pt)); }
+.fs-10 { font-size: calc(10 * var(--pt)); }
+.fs-8  { font-size: calc(8  * var(--pt)); }
+.body p { margin: 0 0 calc(4 * var(--pt)); }
+.body strong, .accent { color: var(--blue); font-weight: 700; }
+.body ul { margin: 0; padding: 0; list-style: none; }
+.body li { margin: 0 0 calc(3 * var(--pt)); padding-left: calc(10 * var(--pt)); position: relative; }
+.body li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+/* ---------- Componenti ---------- */
+.cols > * { min-height: 0; }
+.cols  { display: grid; gap: calc(14 * var(--pt)); align-items: stretch; }
+.cols-2 { grid-template-columns: 1fr 1fr; }
+.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.cols-flow { grid-template-columns: 1fr auto 1fr auto 1fr; }   /* card → card → card */
+
+.card {
+  background: var(--white); border: calc(1 * var(--pt)) solid var(--line);
+  border-radius: calc(6 * var(--pt)); overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.card-head {
+  background: var(--navy); color: var(--white); text-align: center;
+  font-weight: 700; font-size: calc(11 * var(--pt));
+  padding: calc(5 * var(--pt)) calc(8 * var(--pt));
+}
+.card-head.alt { background: var(--blue); }
+.card-sub {
+  margin: calc(6 * var(--pt)) calc(10 * var(--pt)) 0;
+  background: var(--tint); color: var(--navy); text-align: center;
+  font-weight: 700; font-size: calc(10 * var(--pt)); padding: calc(3 * var(--pt)); border-radius: calc(3 * var(--pt));
+}
+.card-body { padding: calc(6 * var(--pt)) calc(10 * var(--pt)); flex: 1; font-size: calc(10 * var(--pt)); }
+
+.arrow {                               /* freccia tra le card */
+  align-self: center; width: calc(16 * var(--pt)); height: calc(16 * var(--pt));
+  background: var(--blue);
+  clip-path: polygon(0 30%, 55% 30%, 55% 0, 100% 50%, 55% 100%, 55% 70%, 0 70%);
+}
+
+.callout {                             /* box di sintesi */
+  background: var(--tint); border: calc(1 * var(--pt)) solid var(--blue);
+  border-radius: calc(6 * var(--pt)); padding: calc(8 * var(--pt)) calc(10 * var(--pt));
+  font-size: calc(10 * var(--pt));
+}
+.callout-title { display: block; margin-bottom: calc(3 * var(--pt)); color: var(--navy); font-weight: 700; font-size: calc(12 * var(--pt)); }
+
+/* ---------- Navigazione ( < e > ai lati ) ---------- */
+.nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: calc(30 * var(--pt)); height: calc(60 * var(--pt));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue); border-radius: calc(6 * var(--pt));
+  opacity: .55; transition: opacity .15s, background .15s;
+  text-decoration: none; z-index: 10;
+}
+.nav:hover, .nav:focus-visible { opacity: 1; background: var(--tint); outline: none; }
+.nav svg { width: 60%; height: 60%; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.nav-prev { left: calc(8 * var(--pt)); }
+.nav-next { right: calc(8 * var(--pt)); }
+.nav[hidden] { display: none; }
+
+@media print { .nav { display: none; } }
