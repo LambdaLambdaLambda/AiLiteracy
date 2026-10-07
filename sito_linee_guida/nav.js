@@ -1,3 +1,14 @@
+// Link di navigazione: il numero n della slide si ricava dal nome del file
+// (slide-07.html → 7) e le frecce puntano sempre a n-1 e n+1
+const m = location.pathname.match(/slide-(\d+)[^\/]*\.html$/);
+if (m) {
+  const n = parseInt(m[1], 10);
+  const file = k => 'slide-' + String(k).padStart(m[1].length, '0') + '.html';
+  const prev = document.querySelector('.nav-prev'), next = document.querySelector('.nav-next');
+  if (prev && n > 1) prev.href = file(n - 1);
+  if (next) next.href = file(n + 1);
+}
+
 // Navigazione da tastiera: ← precedente, → successiva
 document.addEventListener('keydown', e => {
   const sel = e.key === 'ArrowRight' ? '.nav-next' : e.key === 'ArrowLeft' ? '.nav-prev' : null;

@@ -67,7 +67,7 @@ html, body { margin: 0; height: 100%; background: var(--white); overflow: hidden
   left: calc(15 * var(--pt)); top: calc(4 * var(--pt));
   width: calc(40 * var(--pt)); height: calc(40 * var(--pt));
   border-radius: 50%; border: calc(1 * var(--pt)) solid var(--line);
-  background: var(--tint) url('assets/Foto%20profilo%20Alberto%20Carraro.png') center 38% / 150% auto no-repeat;
+  background: var(--tint) url('assets/Foto%20profilo%20Alberto%20Carraro%20compressed.png') center 38% / 150% auto no-repeat;
 }
 .slide::after {
   content: "Alberto Carraro"; position: absolute;
