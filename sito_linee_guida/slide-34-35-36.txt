@@ -1,0 +1,40 @@
+Crea tre pagine "slide-34.html", "slide-35.html", e "slide-36.html" per illustrare sinteticamente i seguenti tre contenuti (numerati da 1 a 3)
+ relativi a Scuola come Deployer, Contratti GDPR e Definizione di Assistenza e SLA.
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini.
+
+L'adozione dell'Intelligenza Artificiale nelle Istituzioni Scolastiche richiede l'inquadramento della scuola nelle nuove categorie giuridiche europee, l'adeguamento dei contratti con i fornitori privati e la definizione di precisi standard operativi e di assistenza tecnica.
+
+---
+
+### **1. La Scuola come Deployer ai sensi dell'AI Act**
+
+*   **Inquadramento e Fonti Normative:**
+    *   **Regolamento (UE) 2024/1689 (AI Act), Articolo 3, paragrafo 1, punto 4:** Definisce il ***deployer*** (utilizzatore) come la persona fisica o giuridica, l'autorità pubblica, l'agenzia o altro organismo che utilizza un sistema di IA sotto la propria autorità (tranne nel caso in cui il sistema sia impiegato nel corso di un'attività personale non professionale).
+    *   **D.M. 9 agosto 2025, n. 166 (*Linee guida per l'introduzione dell'Intelligenza Artificiale nelle scuole*), paragrafo 1.1 e paragrafo 3.1:** Chiarisce che, nell'ambito della gestione dei sistemi di IA, l'Istituzione Scolastica opera formalmente in qualità di *deployer*. Ciò comporta specifici obblighi di governance, tra cui: utilizzare il sistema in modo conforme alle istruzioni operative del fornitore, garantire il monitoraggio da parte di personale scolastico adeguatamente formato *(ex art. 4 AI Act)*, effettuare la Valutazione d'Impatto sui Diritti Fondamentali (**FRIA** *ex art. 27 AI Act* per i sistemi ad alto rischio) ed escludere tassativamente pratiche vietate (come la *sentiment analysis* o il riconoscimento delle emozioni *ex art. 5, par. 1, lett. f dell'AI Act*).
+*   **Esempio Concreto ed Esplicito:**
+    Un Istituto Tecnico decide di adottare una piattaforma d'IA generativa per la personalizzazione dei percorsi di studio e l'orientamento scolastico degli studenti. La scuola non ha sviluppato internamente il software (il cui *provider* o fornitore è una società esterna), ma sceglie di metterlo a disposizione della propria comunità nell'ambito della propria autonomia didattica. In qualità di *deployer*, la scuola deve verificare che lo strumento rispetti le istruzioni d'uso, non effettui profilazioni vietate sui minori e sia soggetto al costante controllo e alla supervisione del docente (*Human-in-the-Loop*).
+
+---
+
+### **2. Contratti Conformi all'Articolo 28 del GDPR**
+
+*   **Inquadramento e Fonti Normative:**
+    *   **Regolamento (UE) 2016/679 (GDPR), Articolo 28, paragrafi 1 e 3:** Dispone che, qualora un trattamento debba essere effettuato per conto del Titolare (l'Istituzione Scolastica), quest'ultimo deve ricorrere unicamente a **Responsabili del trattamento** che forniscano garanzie sufficienti. Il rapporto deve essere regolato da un contratto o altro atto giuridico vincolante che imponga al Responsabile di agire solo su istruzione documentata del Titolare, garantire la riservatezza, adottare adeguate misure di sicurezza *(ex art. 32 GDPR)* e cancellare o restituire i dati al termine del servizio.
+    *   **D.M. 9 agosto 2025, n. 166, paragrafo 3.1 ("Accordi con i fornitori e tutela dei dati") e paragrafo 3.3, lettera e:** Prescrivono che gli accordi tra la scuola (*deployer*/Titolare) e i fornitori esterni debbano includere espressamente tutti gli elementi fissati dall'articolo 28 del GDPR, con particolare divieto per il fornitore di riutilizzare i dati personali, i prompt o le interazioni degli studenti per l'addestramento o il perfezionamento di propri modelli di IA commerciali.
+*   **Esempio Concreto ed Esplicito:**
+    All'atto della stipula della licenza *SaaS (Software as a Service)* per un chatbot didattico, il Dirigente Scolastico sottoscrive con la software house un **Atto di Nomina a Responsabile del Trattamento ex art. 28 GDPR**. Nel contratto viene inserita la seguente clausola vincolante: *"Il Fornitore (Responsabile) si impegna a elaborare i dati personali e i prompt inviati da docenti e studenti esclusivamente per l'erogazione del servizio richiesto dalla Scuola (Titolare). È fatto divieto assoluto al Fornitore di salvare, aggregare o utilizzare le conversazioni scolastiche per finalità proprie, commerciali o per l'addestramento/fine-tuning dei propri algoritmi (clausola di Zero Data Retention per l'addestramento)"*.
+
+---
+
+### **3. Definizione Chiara di Assistenza e SLA (Service Level Agreement)**
+
+*   **Inquadramento e Fonti Normative:**
+    *   **D.M. 9 agosto 2025, n. 166, paragrafo 3.1 ("Accordi con i fornitori e tutela dei dati") e paragrafo 3.2 ("Certificazioni e conformità dei fornitori"):** Impongono alla scuola di pattuire contrattualmente *"accordi chiari con i fornitori dei sistemi di IA, definendo il livello dei servizi di assistenza, manutenzione e le modalità di risoluzione di eventuali problemi"*, verificando che il fornitore possieda adeguate qualificazioni tecniche (es. certificazione AgID per i servizi SaaS e ISO/IEC 27001).
+    *   **Regolamento (UE) 2024/1689 (AI Act), Articolo 25, paragrafo 4 e Considerando 88:** Prevedono che lungo la catena del valore dell'IA, i fornitori e i terzi che forniscono componenti o servizi integrati precisino mediante accordi scritti le capacità, l'accesso tecnico, la manutenzione e l'assistenza necessarie per consentire il corretto e sicuro funzionamento del sistema.
+    *   **Codice dell'Amministrazione Digitale (D.Lgs. 82/2005), Articolo 50-bis e Linee Guida AgID sugli Acquisti della PA:** Richiedono la formalizzazione dei livelli minimi di servizio (*SLA - Service Level Agreement*) per garantire la continuità operativa dei servizi digitali pubblici e la gestione delle emergenze informatiche.
+*   **Esempio Concreto ed Esplicito:**
+    Nel capitolato d'appalto o nel contratto di acquisto della piattaforma di IA, la scuola e il fornitore concordano una griglia formale di **SLA (Service Level Agreement)** e di supporto tecnico:
+    1.  *Disponibilità dell'Infrastruttura (*Uptime*):* Garanzia di funzionamento della piattaforma pari ad almeno il **99,5% su base mensile**, garantendo la continuità didattica nella fascia oraria scolastica (8:00–18:00).
+    2.  *Tempistiche di Risoluzione Guasti (*Troubleshooting*):* In caso di guasto bloccante (es. blocco degli accessi o anomalie severe negli output durante una prova d'esame), il fornitore garantisce la presa in carico della segnalazione entro **1 ora** e il ripristino o la soluzione temporanea entro **4 ore**.
+    3.  *Servizio di Helpdesk e Manutenzione:* Messa a disposizione di un canale di assistenza tecnica dedicato (ticketing e supporto telefonico) riservato all'Animatore Digitale e al team dell'innovazione scolastica per l'aggiornamento costante del software e la gestione dei bug.

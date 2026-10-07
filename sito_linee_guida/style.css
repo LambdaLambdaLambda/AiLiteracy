@@ -405,6 +405,15 @@ pre.mermaid .cluster-label .nodeLabel, pre.mermaid .cluster-label span { font-we
 .card .sol { flex: none; background: color-mix(in srgb, var(--c) 9%, white); border-radius: calc(var(--r) * .75); padding: calc(6 * var(--pt)) calc(9 * var(--pt)); }
 .card .sol b { display: block; margin-bottom: calc(2 * var(--pt)); color: color-mix(in srgb, var(--c) 80%, black); }
 
+.card code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .9em; background: color-mix(in srgb, var(--c) 10%, white); padding: 0 calc(2 * var(--pt)); border-radius: calc(2 * var(--pt)); }
+.card .sol q { font-style: italic; quotes: "«" "»"; }
+
+/* Numeri in evidenza dentro una card (es. livelli di servizio) */
+.stats { flex: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: calc(8 * var(--pt)); }
+.stat { background: color-mix(in srgb, var(--c) 9%, white); border-radius: calc(var(--r) * .75); padding: calc(6 * var(--pt)) calc(8 * var(--pt)); font-size: calc(8 * var(--pt)); line-height: 1.2; }
+.stat .n { display: block; font-family: var(--font-title); font-weight: 700; font-size: calc(17 * var(--pt)); line-height: 1.15; color: color-mix(in srgb, var(--c) 80%, black); }
+.stat b { display: block; margin: calc(1 * var(--pt)) 0 calc(2 * var(--pt)); font-size: calc(9 * var(--pt)); color: var(--navy); }
+
 /* Utilità */
 .grow { flex: 1; min-height: 0; }
 

@@ -1,0 +1,40 @@
+Crea tre pagine "slide-31.html", "slide-32.html", e "slide-33.html" per illustrare sinteticamente i seguenti tre contenuti (numerati da 1 a 3)
+ relativi alla configurazione Sicura dei Prompt nell'Uso dell'IA a Scuola.
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini.
+
+L'impiego dei modelli linguistici di grandi dimensioni (*LLM*) e degli strumenti di Intelligenza Artificiale generativa in ambito educativo richiede l'adozione di rigorose configurazioni di sicurezza predefinite (*Privacy by Design e by Default*). Le Istituzioni Scolastiche, in qualità di *deployer* e Titolari del Trattamento, devono assicurare che le interazioni con gli algoritmi avvengano escludendo qualsiasi rischio di identificazione o profilazione indebita degli studenti, in particolare dei minori.
+
+---
+
+### **1\. Inserimento di Prompt Senza Dati Identificativi**
+
+* **Inquadramento e Fonti Normative:**
+  * **D.M. 9 agosto 2025, n. 166 (** **Linee guida per l'introduzione dell'Intelligenza Artificiale nelle scuole** **), paragrafo 3.2 ("Gestione del diritto di non partecipazione"):** Prescrive espressamente che *"L'inserimento di prompt deve avvenire preferibilmente senza trattamento di dati personali identificativi o riconducibili ad account individuali, in quanto può comportare rischi non compatibili con i principi di minimizzazione e limitazione della finalità"*.
+  * **Regolamento (UE) 2016/679 (GDPR), Articolo 5, paragrafo 1, lettera c ("Minimizzazione dei dati") e Articolo 25, paragrafo 2 ("Protezione dei dati per impostazione predefinita / Privacy by Default"):** Impongono di trattare unicamente i dati personali strettamente necessari per la specifica finalità educativa, vietando l'immissione di informazioni identificative superflue nei sistemi informatici.
+  * **Legge 23 settembre 2025, n. 132 (Legge delega IA), Articolo 4, commi 3 e 4:** Sancisce che l'accesso alle tecnologie di IA e il trattamento dei dati personali dei minori debbano avvenire con modalità trasparenti e protette, previe garanzie sul consenso genitoriale per gli under 14.
+* **Esempio Concreto:** Durante una lezione di italiano nella scuola secondaria di primo grado, il docente assegna un'attività di revisione sintattica guidata da un chatbot di IA generativa.
+  * *Comportamento non conforme/rischioso:* Lo studente digita nel prompt: *"Ciao, sono Marco Rossi della classe 3ªA della scuola Manzoni. Correggi questo tema in cui parlo della mia famiglia e del mio compagno Luca che ha preso un brutto voto"*.
+  * *Configurazione sicura ed esercizio corretto:* Il docente istruisce preventivamente gli studenti a formulare prompt de-identificati: *"Agisci in qualità di tutor di lingua italiana. Analizza la sintassi e la punteggiatura del seguente brano anonimo composto da un alunno di 12 anni: [inserimento del solo testo della composizione, privo di nomi propri, luoghi, riferimenti personali o dati sensibili]"*.
+
+---
+
+### **2\. Disattivazione della Cronologia e Profilazione**
+
+* **Inquadramento e Fonti Normative:**
+  * **D.M. 9 agosto 2025, n. 166, paragrafo 3.2 e paragrafo 3.3:** Stabilisce che *"L'utilizzo di questi strumenti a fini educativi deve quindi ispirarsi a criteria di prudenza, prevedendo l'impiego di configurazioni che impediscano la conservazione dei prompt, la profilazione o il tracciamento degli studenti [...], valutando la disattivazione di funzionalità non necessarie (come la cronologia delle conversazioni o i servizi accessori)"*.
+  * **Regolamento (UE) 2016/679 (GDPR), Articolo 4, punto 4 (Definizione di "Profilazione"), Articolo 22, paragrafo 1 e Considerando 71/75:** Sanciscono la tutela rafforzata dei soggetti vulnerabili (minori), vietando trattamenti automatizzati volti ad analizzare o prevedere aspetti personali, preferenze o comportamenti senza adeguate garanzie.
+  * **Regolamento (UE) 2024/1689 (AI Act), Articolo 50, paragrafo 3 e Considerando 56:** Richiede di adottare misure di trasparenza e prevenzione da profilazioni abusive nei sistemi tecnologici utilizzati nell'istruzione.
+* **Esempio Concreto:** La scuola acquisisce una licenza *educational* di una piattaforma di IA per consentire agli studenti di creare mappe concettuali e schemi di sintesi per lo studio della storia.
+  * *Configurazione sicura ed esplicita:* Il Dirigente Scolastico e l'Animatore Digitale, nell'interfaccia amministrativa della piattaforma (e nell'accordo contrattuale con il fornitore ex art. 28 GDPR), impostano a livello centralizzato le opzioni di **"Zero Data Retention" (Nessuna conservazione dei dati di sessione)** e la **Disattivazione della Cronologia e dell'Addestramento dei Modelli**. Quando l'alunno chiude il browser, la conversazione viene cancellata dai server, impedendo all'algoritmo di memorizzare lo storico dei prompt o di creare un profilo delle lacune o degli interessi dell'alunno.
+
+---
+
+### **3\. Prevenzione Assoluta del Tracciamento Individuale**
+
+* **Inquadramento e Fonti Normative:**
+  * **D.M. 9 agosto 2025, n. 166, paragrafo 2 ("Tutela dei diritti e delle libertà fondamentali") e paragrafo 3.2:** Impone all'Istituzione Scolastica di adottare *"misure come la limitazione dei dati identificativi, l'anonimizzazione e l'uso di identificatori aggregati, per ridurre al minimo i rischi connessi al trattamento dei dati personali"*.
+  * **Regolamento (UE) 2016/679 (GDPR), Articolo 25, paragrafo 1 (** **Privacy by Design** **) e Articolo 32 (** **Sicurezza del trattamento** **):** Obbligano il Titolare del trattamento ad adottare presìdi tecnico-organizzativi idonei a prevenire la tracciabilità e l'identificazione non autorizzata degli utenti.
+  * **Codice in materia di protezione dei dati personali (D.Lgs. 196/2003 novellato dal D.Lgs. 101/2018), Articolo 122 e Direttiva 2002/58/CE (** **ePrivacy** **), Articolo 5, paragrafo 3:** Vietano l'uso di marcatori temporanei, cookie di tracciamento o identificatori di rete che consentano di tracciare le attività online del singolo utente senza un'idonea e conforme base giuridica.
+* **Esempio Concreto:** L'istituto scolastico implementa sul proprio portale un software di tutoraggio d'IA per l'orientamento scolastico e il supporto nello svolgimento di esercizi matematici.
+  * *Configurazione sicura ed esplicita:* L'autenticazione degli studenti al servizio avviene tramite **codici/token pseudonimizzati di classe** (es. `utente_gruppoA_2026` anziché le credenziali anagrafiche personali `nome.cognome@scuola.it`). Il sistema software è privo di codice di tracciamento di terze parti (come pixel o cookie pubblicitari), non registra l'indirizzo IP né l'impronta digitale del dispositivo (*fingerprinting*) dell'alunno, e genera report statistici esclusivamente in forma aggregata d'istituto per il Collegio dei Docenti.
