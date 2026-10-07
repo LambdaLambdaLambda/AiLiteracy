@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>28. Privacy-Enhancing Technologies (PET)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="viewport">
+  <main class="slide">
+    <img class="logo-eft" src="assets/eft-veneto.png" alt="Équipe Formativa Veneto">
+    <h1 class="slide-title">Privacy-Enhancing Technologies (PET)</h1>
+    <div class="line-top"></div>
+    <a class="nav nav-prev" aria-label="Pagina precedente"><svg viewBox="0 0 24 24"><polyline points="15,4 7,12 15,20"/></svg></a>
+    <a class="nav nav-next" aria-label="Pagina successiva"><svg viewBox="0 0 24 24"><polyline points="9,4 17,12 9,20"/></svg></a>
+    <div class="content">
+      <div class="body">
+<div class="note sm"><i class="ico i-shield-check"></i><div><b class="t">Presìdi di protezione dei dati · 3 di 3</b>«Soluzioni digitali che consentono di raccogliere, elaborare, analizzare e condividere informazioni proteggendo la riservatezza e la privacy dei dati» (D.M. 166/2025, par. 3.3). Attuano <em>privacy by design e by default</em>: <strong>GDPR, artt. 25 e 32 · AI Act, Considerando 69 e art. 10, par. 5</strong></div></div>
+<div class="cards dense">
+ <section class="card c-purple"><div class="card-top"><i class="ico num">1</i><div><h3>Privacy differenziale</h3><div class="sub">Differential Privacy</div></div></div><div class="card-img"><img src="assets/img/pet-privacy-differenziale.svg" alt="Al dato del singolo si aggiunge rumore: restano leggibili solo le statistiche d’insieme"></div><div class="card-body"><p>Aggiunge ai dati un <strong>«rumore matematico»</strong> calibrato: si ricavano statistiche e tendenze di scuola (es. il livello medio nelle STEM) senza poter risalire ai voti del singolo studente.</p><p>Strumento: <a href="https://opendp.org" target="_blank" rel="noopener">OpenDP</a> (Università di Harvard)</p></div></section>
+ <section class="card c-orange"><div class="card-top"><i class="ico num">2</i><div><h3>Cifratura omomorfica</h3><div class="sub">Homomorphic Encryption</div></div></div><div class="card-img"><img src="assets/img/pet-cifratura-omomorfica.svg" alt="Il dato entra cifrato, viene elaborato e ne esce un risultato ancora cifrato"></div><div class="card-body"><p>L’IA esegue calcoli e analisi su <strong>dati cifrati</strong>, senza mai decifrarli durante l’elaborazione: nemmeno l’infrastruttura server può leggerli.</p><p>Strumento: <a href="https://github.com/microsoft/SEAL" target="_blank" rel="noopener">Microsoft SEAL</a></p></div></section>
+ <section class="card c-green"><div class="card-top"><i class="ico num">3</i><div><h3>Apprendimento federato</h3><div class="sub">Federated Learning</div></div></div><div class="card-img"><img src="assets/img/pet-apprendimento-federato.svg" alt="I dati restano sui dispositivi; al server centrale arrivano solo gli aggiornamenti del modello"></div><div class="card-body"><p>I <strong>dati restano sui dispositivi</strong> della scuola: l’addestramento avviene in locale e al server centrale arrivano solo gli aggiornamenti aggregati del modello, mai i dati grezzi degli alunni.</p><p>Strumento: <a href="https://www.tensorflow.org/federated" target="_blank" rel="noopener">TensorFlow Federated</a></p></div></section>
+</div>
+      </div>
+    </div>
+    <div class="line-bottom"></div>
+    <img class="footer-banner" src="assets/futura-inlinea.png" alt="Futura – La scuola per l'Italia di domani · Finanziato dall'Unione europea · Ministero dell'Istruzione e del Merito · Italia domani">
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

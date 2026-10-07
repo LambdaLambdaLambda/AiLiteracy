@@ -1,0 +1,46 @@
+Crea una pagina "slide-25.html" per illustrare sinteticamente il seguente contenuto.
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini.
+
+### **La Metodologia HUDERIA del Consiglio d'Europa**
+
+La metodologia **HUDERIA** rappresenta lo strumento di analisi e gestione del rischio sviluppato a livello internazionale dal Consiglio d'Europa per valutare l'impatto dei sistemi di Intelligenza Artificiale sui diritti fondamentali.
+
+---
+
+### **1\. Significato, Origine e Riferimenti Normativi**
+
+* **Definizione dell'Acronimo:** L'acronimo **HUDERIA** individua la **Hu**man Rights, **De**mocracy and the **R**ule of Law **I**mpact **A**ssessment (*Methodology for the Risk and Impact Assessment of Artificial Intelligence Systems from the Point of View of Human Rights, Democracy and the Rule of Law*) *(D.M. 9 agosto 2025, n. 166, par. 3.3, lett. b, nota 15)*.
+* **Adozione Internazionale:** La metodologia è stata elaborata e approvata dal Comitato sull'Intelligenza Artificiale (CAI) del Consiglio d'Europa durante la sua 12ª sessione plenaria a Strasburgo (26–28 novembre 2024), in attuazione della *Convenzione quadro del Consiglio d'Europa sull'Intelligenza Artificiale e i diritti umani, la democrazia e lo Stato di diritto* (CM(2024)52-final del 17 maggio 2024 / adottata a Strasburgo il 5 settembre 2024) *(D.M. 9 agosto 2025, n. 166, Premessa e par. 3.3, nota 15)*.
+
+---
+
+### **2\. Obiettivo e Pilastri di Valutazione**
+
+La metodologia HUDERIA fornisce concetti, processi ed elementi guida di alto livello per identificare, analizzare e valutare i rischi e gli impatti derivanti dall'utilizzo dei sistemi di IA sui tre pilastri dell'ordinamento europeo *(D.M. 9 agosto 2025, n. 166, par. 3.3, lett. b)*:
+
+1. **Diritti Umani (** **Human Rights** **):** Protezione della dignità umana, della vita privata, della tutela dei dati personali, della non discriminazione e della protezione dei soggetti vulnerabili, con primario riferimento ai minori *(Carta dei Diritti Fondamentali dell'UE, artt. 1, 8, 21 e 24; D.M. 9 agosto 2025, n. 166, par. 3.3 e par. 4.1)*.
+2. **Democrazia (** **Democracy** **):** Prevenzione di interferenze indebite, disinformazione, manipolazione cognitiva o condizionamenti dei processi decisionali e partecipativi della società *(Regolamento UE 2024/1689 - AI Act, art. 5, par. 1, lett. a; D.M. 9 agosto 2025, n. 166, par. 3.3, lett. b)*.
+3. **Stato di Diritto (** **Rule of Law** **):** Garanzia della trasparenza algoritmica, della conoscibilità dei criteri di funzionamento, dell'equità dei processi e del diritto a un ricorso effettivo e a una spiegazione chiara *(Regolamento UE 2024/1689 - AI Act, art. 86; D.M. 9 agosto 2025, n. 166, par. 3.3, lett. b e c)*.
+
+---
+
+### **3\. La Gerarchia di Mitigazione del Rischio e Coinvolgimento degli Stakeholder**
+
+La metodologia HUDERIA impone l'adozione di un approccio metodologico rigoroso basato su due componenti chiave:
+
+* **Gerarchia di Mitigazione del Rischio:** Le strategie di prevenzione devono seguire un approccio graduale e gerarchico articolato su tre livelli *(D.M. 9 agosto 2025, n. 166, par. 4.3)*:
+  1. *Prevenzione:* Evitare all'origine l'insorgere di impatti negativi mediante appropriate misure preventive e di progettazione etica.
+  2. *Mitigazione:* Qualora alcuni rischi non possano essere completamente evitati, ridurne al minimo la portata e la probabilità di realizzazione.
+  3. *Ripristino e Rimedio:* Laddove si manifestino effetti avversi nonostante le precauzioni adottate, attivare tempestivamente misure di ripristino (per riportare le persone colpite a una situazione analoga a quella precedente) e di compensazione dei danni subiti.
+* **Coinvolgimento Attivo degli Stakeholder (Stakeholder Engagement Process - SEP):** Prevede la partecipazione attiva e continua della comunità e delle parti interessate lungo l'intero ciclo di vita del sistema di IA per contestualizzare i possibili danni, individuare adeguate misure di mitigazione, promuovere la trasparenza e creare fiducia *(D.M. 9 agosto 2025, n. 166, par. 4.1)*.
+
+---
+
+### **4\. Applicazione nelle Scuole Italiane (D.M. 166/2025, FRIA e DPIA)**
+
+Nell'ordinamento scolastico italiano, l'applicazione della metodologia HUDERIA si concretizza nei seguenti termini:
+
+* **Qualifica della Scuola e Requisiti:** L'Istituzione Scolastica opera in qualità di *deployer* (utilizzatore) del sistema di IA *(Regolamento UE 2024/1689 - AI Act, art. 3, par. 1, n. 4; D.M. 9 agosto 2025, n. 166, par. 1.1)*.
+* **Integrazione tra FRIA e DPIA:** Qualora la scuola intenda mettere in uso un sistema di IA ad alto rischio (ai sensi dell'art. 6 e dell'Allegato III del Regolamento UE 2024/1689), il Dirigente Scolastico è tenuto a effettuare la Valutazione d'Impatto sui Diritti Fondamentali (**FRIA** ex art. 27 dell'AI Act), che integra direttamente la Valutazione d'Impatto sulla Protezione dei Dati (**DPIA** ex art. 35 del GDPR Regolamento UE 2016/679) *(D.M. 9 agosto 2025, n. 166, par. 3.3, lett. b)*.
+* **Adozione di HUDERIA come Modello Guida:** Il Ministero dell'Istruzione e del Merito raccomanda espressamente alle scuole di adottare il modello HUDERIA sia per l'esecuzione dell'analisi dei rischi nella FRIA/DPIA *(D.M. 9 agosto 2025, n. 166, par. 3.3, lett. b)*, sia per la redazione del piano di gestione dei rischi nell'ambito della progettazione scolastica *(D.M. 9 agosto 2025, n. 166, par. 4.1)*.

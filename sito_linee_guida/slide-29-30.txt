@@ -1,0 +1,44 @@
+Crea due pagine "slide-29.html" e "slide-30.html" per illustrare 
+ il Diritto di Non Partecipazione (Opt-Out) nell'Uso dell'IA a Scuola.
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini.
+
+La pagina "slide-29.html" deve trattare i punti 1 e 2 dell'elenco qui di seguito 
+ mentre la pagina "slide-30.html" deve trattare il punto 3 (esempi concreti di applicazione didattica).
+
+Il **diritto di non partecipazione** (*opt-out*) garantisce a studenti e famiglie la possibilità di decidere in modo libero, consapevole e informato se i propri dati personali possano essere utilizzati o conservati dai sistemi di Intelligenza Artificiale, in particolare per le attività di addestramento e ri-addestramento dei modelli algoritmici.
+
+---
+
+### **1\. Inquadramento Normativo e Fonti di Riferimento**
+
+* **D.M. 9 agosto 2025, n. 166 (Linee guida per l'introduzione dell'IA nelle scuole):** Nel **Paragrafo 3.2 ("Gestione del diritto di non partecipazione")**, il Ministero dell'Istruzione e del Merito (MIM) disciplina espressamente questa garanzia, stabilendo che la scelta delle famiglie di non autorizzare l'uso dei dati personali per l'addestramento dell'IA **non deve comportare alcuna limitazione nell'accesso alle tecnologie didattiche stesse o agli strumenti di apprendimento basati sull'IA** (come i modelli linguistici di grandi dimensioni - *LLM*).
+* **Legge 23 settembre 2025, n. 132 (Disposizioni e deleghe in materia di IA):** All'**Articolo 4, comma 3**, viene ribadito il diritto dell'utente di opporsi al trattamento dei propri dati con connessione all'IA, previa informativa chiara e semplice. L'**Articolo 4, comma 4**, sancisce inoltre che per i minori di 14 anni l'accesso all'IA e il relativo trattamento richiedono il consenso espresso di chi esercita la responsabilità genitoriale.
+* **Regolamento (UE) 2016/679 (GDPR):** Trova fondamento nel **Diritto di Opposizione (Articolo 21, paragrafo 1)**, nella **Revoca del Consenso (Articolo 7, paragrafo 3)** e nei principi di **Trasparenza e Informativa (Articoli 13 e 14)**, uniti al principio di **Minimizzazione dei dati (Articolo 5, paragrafo 1, lettera c)**.
+
+---
+
+### **2\. Requisiti Gestionali per l'Istituzione Scolastica**
+
+Per dare corretta attuazione al diritto di non partecipazione, la scuola (in qualità di *deployer* ed entità Titolare del Trattamento) deve rispettare i seguenti obblighi operativi *(D.M. 9 agosto 2025, n. 166, par. 3.2 e 3.3)*:
+
+1. **Modulistica Standardizzata e Tempi Certi:** Predisporre moduli chiari per l'esercizio dell'opt-out, definendo tempistiche di presa in carico e di riscontro.
+2. **Parità di Opportunità Educative:** Assicurare che lo studente la cui famiglia ha esercitato l'opt-out continui a usufruire pienamente delle attività didattiche e delle piattaforme di apprendimento guidate dall'IA, senza subire penalizzazioni, discriminazioni o trattamenti svantaggiosi.
+3. **Accorgimenti Tecnici nei Prompt:** Configurare le piattaforme affinché i prompt e i testi immessi da studenti e docenti avvengano preferibilmente senza dati identificativi o associati ad account personali, disattivando per impostazione predefinita (*Privacy by Default*) la cronologia delle conversazioni e il tracciamento utente.
+4. **Estensione ai Fornitori Esterni:** Imporre la garanzia dell'opt-out anche nei contratti stipulati con i fornitore di software/SaaS esterni *(ex art. 28 GDPR)*, vietando contrattualmente il riutilizzo dei dati e delle interazioni scolastiche per il fine-tuning dei modelli commerciali.
+
+---
+
+### **3\. Esempi Concreti di Applicazione Didattica**
+
+#### **Esempio 1: Esercizio dell'Opt-out sull'Addestramento di Modelli Linguistici (** **LLM** **)**
+
+Una classe di scuola secondaria utilizza un assistente di IA generativa per la revisione grammaticale e la stesura di testi. La famiglia di un alunno sceglie di esercitare il diritto di non partecipazione per impedire che i temi scritti dal figlio vengano memorizzati o usati dal fornitore del software per addestrare il modello algoritmico.
+
+* *Soluzione operativa:* La scuola fornisce all'alunno un accesso configurato in modalità **privacy-enhanced** (es. tramite un'istanza *educational* con opzione *Zero Data Retention* attiva e senza login nominale). L'alunno svolgerà esattamente la stessa attività didattica dei compagni, ma i suoi testi non verranno salvati né riutilizzati dai server del vendor.
+
+#### **Esempio 2: Piattaforma di Tutoraggio Adattivo per la Matematica**
+
+In un Istituto Comprensivo viene adottato un software di didattica personalizzata che analizza gli errori svolti negli esercizi di matematica per adattare il livello di difficoltà.
+
+* *Soluzione operativa:* L'informativa fornita ai genitori *(ex artt. 13-14 GDPR)* chiarisce distintamente le due finalità: (a) l'esecuzione del compito didattico personale in classe e (b) l'eventuale uso dei dati aggregati per l'addestramento globale dell'algoritmo del fornitore. Se la famiglia nega il consenso per la finalità (b), la scuola e il fornitore garantiscono che lo studente utilizzi regolarmente il software per lo studio, ma escludono i log della sua sessione dal dataset di ri-addestramento dell'algoritmo del vendor.

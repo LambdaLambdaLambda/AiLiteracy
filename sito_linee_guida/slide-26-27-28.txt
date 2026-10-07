@@ -1,0 +1,39 @@
+Crea tre pagine "slide-26.html", "slide-27.html", e "slide-28.html" per illustrare sinteticamente i seguenti tre contenuti (numerati da 1 a 3). 
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini.
+
+
+### **Presìdi di Protezione Dati e Tecnologie Avanzate nell'Uso dell'IA a Scuola**
+
+L'introduzione dei sistemi di Intelligenza Artificiale nella scuola richiede l'adozione di rigorose garanzie tecniche e organizzative per tutelare i dati personali degli utenti, in particolare dei minori, garantendo al contempo lo sviluppo di sperimentazioni didattiche sicure e conformi al quadro normativo europeo e nazionale.
+
+---
+
+### **1\. Uso di Ambienti Controllati in Ambito Scolastico**
+
+* **Inquadramento e Fonti Normative:** L'impiego dell'IA all'interno di ambienti controllati (*regulatory sandboxes* o spazi di isolamento tecnologico) è raccomandato dalle **Linee guida del MIM sull'IA nella Scuola (D.M. 9 agosto 2025, n. 166, par. 3.2, "Gestione responsabile dei dati")**, dove si prescrive di privilegiare soluzioni che *"assicurino il trattamento dei dati esclusivamente in ambito scolastico e sotto il controllo diretto del deployer"*. A livello europeo, l'architettura degli spazi controllati di sperimentazione è disciplinata dal **Regolamento (UE) 2024/1689 (AI Act), articoli 57 e 58**, che definiscono le condizioni di sicurezza per testare e convalidare sistemi innovativi sotto la diretta sorveglianza delle autorità competenti prima della loro messa in servizio.
+* **Esempio Concreto in Ambito Scolastico:** Un Istituto Comprensivo intende testare un assistente virtuale basato su un modello linguistico (*LLM*) per il supporto allo studio. Invece di far accedere gli studenti a piattaforme pubbliche/commerciali online, la scuola configura un **ambiente protetto scolastico** (es. un'istanza *cloud educational* o un server locale della scuola). In questo ambiente protetto, l'accesso avviene tramite credenziali d'istituto anonimizzate, la conservazione della cronologia dei prompt è disattivata, ed è attivo un blocco tecnico che impedisce al fornitore esterno di estrarre o riutilizzare i testi inviati dagli studenti per l'addestramento dei propri modelli commerciali.
+
+---
+
+### **2\. Generazione di Dataset Sintetici ove Possibile**
+
+* **Inquadramento e Fonti Normative:** I dati sintetici sono definiti dalle **Linee guida del MIM (D.M. 9 agosto 2025, n. 166, par. 3.3 e par. 4.3)** come *"dati artificiali generati da dati originali e da un modello addestrato per riprodurre le caratteristiche e la struttura dei dati originali"*, richiamando il Report *TechSonar* del Garante Europeo della Protezione dei Dati (EDPS) e il **Regolamento (UE) 2022/868 (Data Governance Act), Considerando 7**. Il ricorso ai dati sintetici è caldeggiato anche dalla **Legge 23 settembre 2025, n. 132 (Legge delega IA), art. 8, commi 3 e 4**, che ne incentiva l'uso per finalità di ricerca, sperimentazione e addestramento per minimizzare l'uso di dati reali.
+* **Esempio Concreto in Ambito Scolastico:** Un gruppo di docenti e animatori digitali desidera addestrare un algoritmo di IA per identificare precocemente i segnali di rischio di abbandono scolastico o di ritardo negli apprendimenti. Anziché alimentare l'algoritmo con lo storico reale dei voti, delle assenze e delle schede personali degli alunni degli anni precedenti, la scuola genera un **dataset sintetico**: un insieme di dati del tutto fittizio ma statisticamente coerente con la struttura della popolazione scolastica. L'algoritmo viene sviluppato e testato su questi profili simulati, azzerando qualsiasi rischio di violazione della privacy o di diffusione di dati personali degli studenti.
+
+---
+
+
+### **3\. Ricorso a Privacy-Enhancing Technologies (PET)**
+
+* **Inquadramento e Fonti Normative:** Le *Privacy-Enhancing Technologies* (PET) sono definite dalle **Linee guida del MIM (D.M. 9 agosto 2025, n. 166, par. 3.3)** come *"soluzioni digitali che consentono di raccogliere, elaborare, analizzare e condividere informazioni proteggendo la riservatezza e la privacy dei dati"*, in attuazione dei principi di *Privacy by Design e by Default* sanciti dal **GDPR (Regolamento UE 2016/679), art. 25 e art. 32**, e dal **Regolamento (UE) 2024/1689 (AI Act), Considerando 69 e art. 10, par. 5**.
+* **Esempi Concreti di PET con Riferimenti Tecnici e Link Applicativi:**
+  1. **Privacy Differenziale (** **Differential Privacy** **):**
+    * *Funzionamento:* Inserisce un "rumore matematico" calibrato all'interno dei dataset, consentendo di estrarre statistiche e tendenze generali di scuola (es. il livello medio di apprendimento nelle discipline STEM) rendendo matematicamente impossibile risalire ai voti del singolo studente.
+    * *Strumento di riferimento:* **OpenDP**, il quadro open-source sviluppato dall'Università di Harvard per la privacy differenziale: https://opendp.org
+  2. **Cifratura Omomorfica (** **Homomorphic Encryption** **):**
+    * *Funzionamento:* Permette a un software di IA di eseguire elaborazioni, calcoli e analisi su dati crittografati senza doversi mai decifrare in chiaro durante il processo, garantendo che nemmeno l'infrastruttura server possa leggere i dati.
+    * *Strumento di riferimento:* **Microsoft SEAL**, libreria per la cifratura omomorfica: https://github.com/microsoft/SEAL
+  3. **Apprendimento Federato (** **Federated Learning** **):**
+    * *Funzionamento:* Permette di addestrare un modello di IA distributivo mantenendo i dati locali direttamente sui dispositivi della scuola (o dei docenti); i dispositivi elaborano gli algoritmi in locale e inviano al server centrale unicamente gli aggiornamenti matematici aggregati del modello, senza mai trasmettere i dati grezzi degli alunni.
+    * *Strumento di riferimento:* **TensorFlow Federated (TFF)**, il framework per l'apprendimento federato su dati decentralizzati: https://www.tensorflow.org/federated

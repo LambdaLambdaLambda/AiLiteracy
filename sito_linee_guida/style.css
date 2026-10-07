@@ -379,6 +379,32 @@ pre.mermaid .cluster-label .nodeLabel, pre.mermaid .cluster-label span { font-we
 .steps img { height: calc(15 * var(--pt)); width: auto; }
 .steps span { opacity: .75; font-weight: 400; }
 
+.steps.sm { height: calc(18 * var(--pt)); }                /* versione compatta, dentro una card */
+.steps.sm > div { font-size: calc(8.5 * var(--pt)); gap: calc(4 * var(--pt)); }
+.steps.sm img { height: calc(10 * var(--pt)); }
+.card .foot { flex: none; padding-top: calc(4 * var(--pt)); border-top: calc(1 * var(--pt)) solid color-mix(in srgb, var(--c) 25%, white); }
+
+/* Acronimo in evidenza: ogni gruppo di lettere prende il colore del concetto che rappresenta */
+.acro { flex: none; font-family: var(--font-title); font-weight: 700; font-size: calc(24 * var(--pt)); line-height: 1; letter-spacing: .03em; }
+.acro span { color: var(--c); }
+
+/* Illustrazione a sinistra (dentro un riquadro .dbox) e colonna di card a destra */
+.split { flex: 1; min-height: 0; display: grid; grid-template-columns: 5fr 7fr; gap: calc(10 * var(--pt)); }
+.split > .dbox { padding: calc(8 * var(--pt)) calc(10 * var(--pt)); gap: calc(6 * var(--pt)); }
+.split > .dbox img { flex: 1; min-height: 0; width: 100%; object-fit: contain; }
+.split > .dbox .cap { text-align: center; line-height: 1.25; }
+.split > .col { min-height: 0; display: flex; flex-direction: column; gap: calc(8 * var(--pt)); }
+.split > .col > .card { flex: 1 1 auto; font-size: calc(9 * var(--pt)); line-height: 1.22; padding: calc(7 * var(--pt)) calc(10 * var(--pt)); gap: calc(4 * var(--pt)); }
+.split > .col > .card h3 { font-size: calc(11.5 * var(--pt)); }
+.split > .col > .card .ico { width: calc(22 * var(--pt)); height: calc(22 * var(--pt)); }
+.card a { color: color-mix(in srgb, var(--c) 85%, black); font-weight: 700; }
+.card blockquote { margin: 0; padding-left: calc(8 * var(--pt)); border-left: calc(2 * var(--pt)) solid color-mix(in srgb, var(--c) 40%, white); font-style: italic; }
+
+/* Illustrazione larga dentro il box di sintesi; riquadro "soluzione" dentro una card */
+.note > img.wide { flex: none; height: calc(40 * var(--pt)); width: auto; }
+.card .sol { flex: none; background: color-mix(in srgb, var(--c) 9%, white); border-radius: calc(var(--r) * .75); padding: calc(6 * var(--pt)) calc(9 * var(--pt)); }
+.card .sol b { display: block; margin-bottom: calc(2 * var(--pt)); color: color-mix(in srgb, var(--c) 80%, black); }
+
 /* Utilità */
 .grow { flex: 1; min-height: 0; }
 
