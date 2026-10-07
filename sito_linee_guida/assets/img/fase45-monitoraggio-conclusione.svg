@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#49A874"/><stop offset="1" stop-color="#2E8B57"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9534A"/><stop offset="1" stop-color="#A93226"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E09A3A"/><stop offset="1" stop-color="#C9761A"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A7DB0"/><stop offset="1" stop-color="#2F5D8A"/></linearGradient>
+    <linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5C8A"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C72E0"/><stop offset="1" stop-color="#6F4FD1"/></linearGradient>
+    <marker id="an" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.500" markerHeight="4.500" orient="auto"><path d="M0 0l10 5-10 5z" fill="#1F3A5F"/></marker>
+  </defs>
+  <rect x="10" y="26" width="124" height="88" rx="9" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3"/>
+  <path d="M52 134h40M72 114v20" stroke="#1F3A5F" stroke-width="3.500" stroke-linecap="round"/>
+  <path d="M22 74h22l9-26 14 48 10-30 6 8h40" fill="none" stroke="#C9761A" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="118" cy="112" r="22" fill="#FFFFFF" fill-opacity=".9" stroke="url(#go)" stroke-width="5"/><path d="M134 128l16 16" stroke="#C9761A" stroke-width="7" stroke-linecap="round"/>
+  <path d="M112 106v8M112 119h.01" stroke="#C0392B" stroke-width="3.500" stroke-linecap="round" transform="translate(6 0)"/>
+  <path d="M156 78h18" stroke="#1F3A5F" stroke-width="3.500" stroke-linecap="round" marker-end="url(#an)"/>
+  <path d="M190 22h62l22 22v112a6 6 0 0 1-6 6h-78a6 6 0 0 1-6-6V28a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M252 22v22h22" fill="#EBF2FA" stroke="#1F3A5F" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M198 140h62" stroke="#8A97A8" stroke-width="2" stroke-linecap="round"/>
+  <g fill="url(#gp)"><rect x="202" y="116" width="11" height="22" rx="2"/><rect x="217" y="104" width="11" height="34" rx="2"/><rect x="232" y="90" width="11" height="48" rx="2"/><rect x="247" y="72" width="11" height="66" rx="2"/></g>
+  <path d="M200 96l18-12 15-10 22-18" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#an)"/>
+<circle cx="272" cy="158" r="24" fill="url(#gp)"/><circle cx="272" cy="158" r="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(260 146) scale(1)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22V3"/><path d="M5 4h13l-3 4.500 3 4.500H5"/></g>
+</svg>

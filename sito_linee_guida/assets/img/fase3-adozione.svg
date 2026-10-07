@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 232">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#49A874"/><stop offset="1" stop-color="#2E8B57"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9534A"/><stop offset="1" stop-color="#A93226"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E09A3A"/><stop offset="1" stop-color="#C9761A"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A7DB0"/><stop offset="1" stop-color="#2F5D8A"/></linearGradient>
+    <linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5C8A"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C72E0"/><stop offset="1" stop-color="#6F4FD1"/></linearGradient>
+    <marker id="an" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.500" markerHeight="4.500" orient="auto"><path d="M0 0l10 5-10 5z" fill="#1F3A5F"/></marker>
+  </defs>
+<rect x="20" y="44" width="34" height="28" rx="5" fill="#E4F2EA" stroke="#2E8B57" stroke-width="2.500" />
+<rect x="62" y="44" width="34" height="28" rx="5" fill="#FFFFFF" stroke="#C9D2DE" stroke-width="2.500" stroke-dasharray="4 3"/>
+<rect x="104" y="44" width="34" height="28" rx="5" fill="#FFFFFF" stroke="#C9D2DE" stroke-width="2.500" stroke-dasharray="4 3"/>
+<rect x="20" y="82" width="34" height="28" rx="5" fill="#FFFFFF" stroke="#C9D2DE" stroke-width="2.500" stroke-dasharray="4 3"/>
+<rect x="62" y="82" width="34" height="28" rx="5" fill="#E4F2EA" stroke="#2E8B57" stroke-width="2.500" />
+<rect x="104" y="82" width="34" height="28" rx="5" fill="#FFFFFF" stroke="#C9D2DE" stroke-width="2.500" stroke-dasharray="4 3"/>
+<g fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 58l5 5 9-10"/><path d="M72 96l5 5 9-10"/></g>
+<path d="M146 78h16" stroke="#1F3A5F" stroke-width="3.500" stroke-linecap="round" marker-end="url(#an)"/>
+<circle cx="226" cy="78" r="46" fill="url(#gg)"/><circle cx="226" cy="78" r="39" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(201 53) scale(2.080)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c4 3 5 8 5 12H7c0-4 1-9 5-12z"/><circle cx="12" cy="9" r="1.600"/><path d="M7 14l-3 3 3 1M17 14l3 3-3 1M10 18v4M14 18v4"/></g>
+<path d="M30 150h240" stroke="#D5DCE5" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round"/>
+<circle cx="60" cy="192" r="26" fill="url(#gb)"/><circle cx="60" cy="192" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(46 178) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></g>
+<circle cx="150" cy="192" r="26" fill="url(#gp)"/><circle cx="150" cy="192" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(136 178) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><rect x="9" y="9.500" width="6" height="4.500" rx="1"/><path d="M10.200 9.500V8a1.800 1.800 0 0 1 3.600 0v1.500"/></g>
+<circle cx="240" cy="192" r="26" fill="url(#gn)"/><circle cx="240" cy="192" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(226 178) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16l-4-4-4 4M12 12v9"/><path d="M20.390 18.390A5 5 0 0 0 18 9h-1.260A8 8 0 1 0 3 16.300"/></g>
+</svg>

@@ -414,6 +414,15 @@ pre.mermaid .cluster-label .nodeLabel, pre.mermaid .cluster-label span { font-we
 .stat .n { display: block; font-family: var(--font-title); font-weight: 700; font-size: calc(17 * var(--pt)); line-height: 1.15; color: color-mix(in srgb, var(--c) 80%, black); }
 .stat b { display: block; margin: calc(1 * var(--pt)) 0 calc(2 * var(--pt)); font-size: calc(9 * var(--pt)); color: var(--navy); }
 
+.steps > div.off { opacity: .28; }                       /* fasi non trattate nella pagina */
+
+/* Percorso a tappe: immagine della strada a tutta pagina, con le etichette delle tappe sovrapposte */
+.road { flex: 1; min-height: 0; position: relative; }
+.road > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.road .stop { --c: var(--blue); position: absolute; width: calc(132 * var(--pt)); transform: translateX(-50%); text-align: center; font-size: calc(8.5 * var(--pt)); line-height: 1.2; }
+.road .stop b { display: block; font-size: calc(12 * var(--pt)); color: color-mix(in srgb, var(--c) 85%, black); }
+.road .note { position: absolute; left: 0; top: 0; width: calc(190 * var(--pt)); }
+
 /* Utilità */
 .grow { flex: 1; min-height: 0; }
 

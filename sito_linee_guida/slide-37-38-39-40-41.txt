@@ -1,0 +1,49 @@
+Crea cinque pagine "slide-37.html", "slide-38.html", "slide-39.html", "slide-40.html", e "slide-41.html" per illustrare sinteticamente i seguenti tre contenuti (numerati da 1 a 4).
+ relative a "Il Percorso di Adozione dell'IA nell'Istituzione Scolastica: Le 5 Fasi Operative".
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+ La prima pagina deve contenere solo un'infografica con un'immagine del percorso 
+come una strada con le tappe. Le altre 4 pagine sono ciascuna dedicata 
+ ad una delle fasi del percorso di adozione.
+ 
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini per ciascuna delle altre pagine.
+
+
+L'introduzione dei sistemi di Intelligenza Artificiale nella scuola non può avvenire in modo estemporaneo, ma deve seguire un ciclo di vita strutturato e progressivo. Le **Linee guida per l'introduzione dell'Intelligenza Artificiale nelle scuole (D.M. 9 agosto 2025, n. 166, capitolo 4.1)** definiscono un approccio metodologico in **5 fasi** volte a garantire la conformità normativa, l'efficacia didattica, la sicurezza dei dati e la piena tutela dei diritti dei minori.
+
+---
+
+### **1. Fase 1: Definizione (Analisi del Contesto e Approvazione Iniziale)**
+
+*   **Inquadramento e Fonti Normative:**
+    La fase di definizione rappresenta il punto di partenza dell'iniziativa. L'Istituzione Scolastica, nell'esercizio della propria autonomia didattica e organizzativa *(D.P.R. 8 marzo 1999, n. 275)*, valuta la propria maturità digitale (infrastrutture, connettività, competenze del personale) e individua i bisogni prioritari nei tre ambiti di applicazione: IA al servizio degli studenti, a supporto dei docenti e a sostegno dell'organizzazione *(D.M. 9 agosto 2025, n. 166, par. 4.1, punto 1)*. In questa fase si applica il processo di coinvolgimento attivo degli stakeholder (*Stakeholder Engagement Process - SEP*) previsto dalla **metodologia HUDERIA del Consiglio d'Europa** *(D.M. 166/2025, par. 4.1, nota 19)*, con la declinazione degli indirizzi strategici tramite l'Atto di Indirizzo del Dirigente Scolastico *(Legge 13 luglio 2015, n. 107, art. 1, comma 14)* e la formale delibera dell'iniziativa nel Piano Triennale dell'Offerta Formativa (PTOF) da parte del Collegio dei Docenti e del Consiglio d'Istituto.
+*   **Esempio Concreto ed Esplicito:**
+    Un Istituto Comprensivo rileva nel Rapporto di Autovalutazione (RAV) una significativa fragilità nelle competenze di comprensione del testo e nelle discipline STEM negli alunni della scuola secondaria di primo grado. Il Dirigente Scolastico emana un Atto di Indirizzo specifico che chiede di sperimentare software d'IA generativa per la personalizzazione dell'apprendimento. Il Collegio dei Docenti analizza le proposte e seleziona un caso d'uso specifico: un tutor virtuale di lettura e logica matematica per le classi seconde. L'iniziativa viene approvata e inserita nell'aggiornamento del PTOF d'istituto.
+
+---
+
+### **2. Fase 2: Pianificazione (Progettazione di Dettaglio e Gestione del Rischio)**
+
+*   **Inquadramento e Fonti Normative:**
+    In questa seconda fase si sviluppa l'analisi tecnico-organizzativa del caso d'uso e si definisce il piano di gestione e mitigazione dei rischi *(D.M. 9 agosto 2025, n. 166, par. 4.1, punto 2)*. In qualità di *deployer* e Titolare del Trattamento, la scuola effettua la Valutazione d'Impatto sulla Protezione dei Dati (**DPIA** *ex art. 35 del GDPR Regolamento UE 2016/679*), integrata con la Valutazione d'Impatto sui Diritti Fondamentali (**FRIA** *ex art. 27 del Regolamento UE 2024/1689 - AI Act*) condotta secondo la gerarchia di mitigazione del modello HUDERIA. Vengono verificati i requisiti tecnici e le certificazioni dei fornitori (es. qualificazioni AgID per i servizi SaaS e ISO/IEC 27001) e stipulati i contratti vincolanti con i vendor (*ex art. 28 GDPR*), con l'inserimento del divieto di riutilizzo dei dati e dei prompt per l'addestramento di modelli commerciali. Si predispongono inoltre l'informativa privacy per le famiglie e la modulistica per raccogliere il consenso espresso dei genitori per i minori di 14 anni *(Legge 23 settembre 2025, n. 132, art. 4, comma 4)* e per la gestione del diritto di non partecipazione (*opt-out*).
+*   **Esempio Concreto ed Esplicito:**
+    Prima di acquistare le licenze della piattaforma di tutoraggio, il Dirigente Scolastico e il DPO redigono la DPIA/FRIA integrata, accertando che il software non utilizzi tecniche di *sentiment analysis* vietate *(art. 5, par. 1, lett. f AI Act)*. La scuola sottoscrive con la software house l'Atto di Nomina a Responsabile ex art. 28 GDPR contenente la clausola di *Zero Data Retention* per l'addestramento e invia alle famiglie dei 120 alunni coinvolti l'informativa trasparente, accompagnata dal modulo per richiedere l'eventuale opt-out dall'uso dei dati per l'addestramento senza alcuna penalizzazione didattica per l'alunno.
+
+---
+
+### **3. Fase 3: Adozione (Lancio Operativo, Formazione e Censimento)**
+
+*   **Inquadramento e Fonti Normative:**
+    In questa terza fase la sperimentazione prende vita. Le Linee guida raccomandano un'adozione graduale (es. classi pilota) per testare l'impatto della tecnologia prima di un'estensione su larga scala *(D.M. 9 agosto 2025, n. 166, par. 4.1, punto 3)*. L'implementazione è accompagnata da un piano di formazione strutturato per il personale scolastico sull'alfabetizzazione all'IA (*AI Literacy*), sostenuto dai fondi PNRR *(Decreto Ministeriale 11 novembre 2025, n. 219)* ed in conformità all'**articolo 4 del Regolamento (UE) 2024/1689 (AI Act)**. Durante le attività, i docenti applicano configurazioni sicure dei prompt (prompt privi di dati anagrafici, disattivazione della cronologia e del tracciamento). La scuola provvede inoltre a caricare la **"Scheda Progetto IA"** nell'area riservata della Piattaforma Unica per il censimento della sperimentazione presso il Ministero *(D.M. 10 ottobre 2023, n. 192 e D.M. 9 agosto 2025, n. 166, art. 6)*.
+*   **Esempio Concreto ed Esplicito:**
+    La scuola avvia la sperimentazione in due classi pilota per una durata di 6 settimane. Prima dell'ingresso in aula, i docenti delle classi partecipano a un percorso di formazione erogato dallo snodo formativo territoriale PNRR (ex D.M. 219/2025), imparando a configurare la piattaforma con token pseudonimizzati di classe (es. `alunno_classe2a_01`). In classe, il docente guida gli studenti nell'interrogare l'IA senza mai inserire nomi propri, numeri di telefono o dati personali nei prompt. Nel contempo, il personale di segreteria compila la "Scheda Progetto IA" sul portale `unica.istruzione.gov.it`.
+
+---
+
+### **4. Fase 4 e Fase 5: Monitoraggio e Conclusione (Verifica, Miglioramento Continuo e Rendicontazione)**
+
+*   **Inquadramento e Fonti Normative:**
+    Le ultime due fasi garantiscono la continuità e la sostenibilità dell'iniziativa nel tempo *(D.M. 9 agosto 2025, n. 166, par. 4.1, punti 4 e 5)*:
+    *   **Fase 4 (Monitoraggio):** Avviene in parallelo all'adozione e riveste un doppio ruolo. Da un lato verifica l'avanzamento gestionale e delle milestone; dall'altro controlla costantemente gli output algoritmici per rilevare "allucinazioni", errori o *bias* di genere/etnici, assicurando il principio dell'imprescindibile sorveglianza umana (*Human-in-the-Loop* ex art. 14 AI Act). Prevede inoltre il costante aggiornamento dei rischi e della DPIA/FRIA in linea con la metodologia HUDERIA e la gestione di eventuali violazioni dei dati personali (*Data Breach ex artt. 33-34 GDPR*).
+    *   **Fase 5 (Conclusione e Rendicontazione):** Consente di valutare l'impatto didattico e il raggiungimento degli obiettivi, presentando la rendicontazione finale al Collegio dei Docenti e al Consiglio d'Istituto *(D.Lgs. 16 aprile 1994, n. 297, art. 281)*. In caso di esito positivo, il progetto viene esteso a tutto l'istituto e la documentazione viene aggiornata sia nel PTOF sia nella Dashboard della Piattaforma Unica per la condivisione delle buone pratiche con il Ministero e le altre scuole *(D.M. 166/2025, par. 5)*.
+*   **Esempio Concreto ed Esplicito:**
+    Durante le settimane di sperimentazione, i docenti effettuano verifiche a campione sugli output del tutor virtuale, accorgendosi che l'algoritmo in un esercizio di geometria ha fornito una spiegazione imprecisa; il docente corregge l'errore in aula con gli alunni e segnala l'anomalia tecnica al fornitore tramite il canale di assistenza SLA pattuito. Al termine della sperimentazione, la commissione di valutazione rileva un incremento del 15% nei punteggi delle verifiche formative della classe pilota. Il Dirigente e il Collegio dei Docenti redigono la relazione di rendicontazione finale, la presentano al Consiglio d'Istituto e approvano l'estensione della piattaforma d'IA a tutte le classi seconde e terze per l'anno scolastico successivo, aggiornando il censimento sulla Piattaforma Unica.
