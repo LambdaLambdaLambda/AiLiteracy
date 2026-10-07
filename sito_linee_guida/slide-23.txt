@@ -1,0 +1,22 @@
+Crea una pagina "slide-23.html" per illustrare sinteticamente il seguente contenuto.
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini.
+
+### **Ruoli e Governance**
+
+Le fonti normative definiscono una precisa ripartizione di ruoli e responsabilità tra livello europeo, nazionale e d'istituto:
+
+#### **Inquadramento Generale e Definizioni di Ruolo:**
+
+* **Fornitore (** **Provider** **):** La persona fisica o giuridica che sviluppa un sistema o modello di IA e lo immette sul mercato con il proprio nome o marchio *(Regolamento UE 2024/1689 - AI Act, art. 3, par. 1, n. 2)*.
+* **Utilizzatore (** **Deployer** **):** L'Istituzione Scolastica opera formalmente in qualità di *deployer*, definita come l'autorità pubblica o l'organismo che utilizza un sistema di IA sotto la propria autorità *(Regolamento UE 2024/1689 - AI Act, art. 3, par. 1, n. 4; D.M. 9 agosto 2025, n. 166, par. 1.1)*.
+
+#### **Articolazione dei Ruoli all'Interno dell'Istituzione Scolastica:**
+
+* **Istituzione Scolastica (** **Deployer** **):** Soggetto responsabile dell'uso etico, sicuro e conforme dei sistemi tecnologici adottati nell'ambito della propria autonomia amministrativo-didattica *(D.P.R. 8 marzo 1999, n. 275; D.M. 9 agosto 2025, n. 166, par. 1.1)*.
+* **Dirigente Scolastico (Legale Rappresentante del Titolare del Trattamento):** Rappresenta la scuola, emana l'Atto di Indirizzo, dispone la redazione delle valutazioni d'impatto (DPIA e FRIA), stipula i contratti con i fornitori ed emana le nomine dei soggetti autorizzati *(D.Lgs. 30 marzo 2001, n. 165, art. 25; GDPR Regolamento UE 2016/679, art. 24 e art. 35; D.M. 9 agosto 2025, n. 166, par. 3.1–3.3)*.
+* **Responsabile della Protezione dei Dati (DPO / RPD):** Figura di consulenza specialistica e indipendente obbligatoria per le PA, che assiste il Dirigente Scolastico nella condotta della DPIA/FRIA e sorveglia la conformità dei trattamenti *(GDPR Regolamento UE 2016/679, artt. 37–39; D.M. 9 agosto 2025, n. 166, par. 3.3)*.
+* **Docenti e Personale ATA (Soggetti Autorizzati al Trattamento):** Designati formalmente dal Titolare con specifiche istruzioni operative sulle operazioni di trattamento consentite *(GDPR Regolamento UE 2016/679, art. 29; D.Lgs. 30 giugno 2003, n. 196 novellato dal D.Lgs. 101/2018, art. 2-quaterdecies; D.M. 9 agosto 2025, n. 166, par. 3.3)*.
+* **Studenti e Famiglie (Interessati):** Titoli dei diritti di riservatezza e trasparenza. Per l'accesso ai sistemi di IA dei minori di 14 anni è richiesto il consenso espressamente prestato da chi esercita la responsabilità genitoriale *(Legge 23 settembre 2025, n. 132, art. 4, comma 4; GDPR Regolamento UE 2016/679, art. 8; D.Lgs. 196/2003, art. 2-quinquies)*, unitamente alla facoltà di esercitare l'**opt-out** dall'addestramento dei modelli senza penalizzazioni didattiche *(D.M. 9 agosto 2025, n. 166, par. 3.2)*.
+* **Ministero dell'Istruzione e del Merito (MIM):** Organo di indirizzo e governo centrale, rende disponibili le Linee Guida e i servizi informatici integrati su Piattaforma Unica e monitora le sperimentazioni mediante una Dashboard dedicata *(D.L. 22 giugno 2023, n. 75, art. 21, comma 4-ter; D.M. 10 ottobre 2023, n. 192; D.M. 9 agosto 2025, n. 166, artt. 3–6)*.
+* **Fornitori Infrastrutturali (Responsabili Esterni del Trattamento):** Soggetti affidatari dei servizi in cloud e dello sviluppo applicativo (come Sogei S.p.A. per i sistemi del MIM) vincolati da apposito atto contrattuale *(GDPR Regolamento UE 2016/679, art. 28; D.M. 9 agosto 2025, n. 166, art. 7, comma 3)*.

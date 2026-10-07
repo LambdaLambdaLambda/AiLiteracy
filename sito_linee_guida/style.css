@@ -335,6 +335,50 @@ pre.mermaid .node rect, pre.mermaid .cluster rect { rx: 10px; ry: 10px; }
 /* titoli dei raggruppamenti nei diagrammi Mermaid */
 pre.mermaid .cluster-label .nodeLabel, pre.mermaid .cluster-label span { font-weight: 700; font-size: 15px; color: #1F3A5F; }
 
+/* Livelli sovrapposti (piramide del rischio): a sinistra la fetta di piramide, a destra la card
+   con il confronto tra le fonti normative */
+.tiers {
+  flex: 1; min-height: 0;
+  display: grid; grid-template-columns: calc(112 * var(--pt)) 1fr; grid-auto-rows: minmax(0, 1fr);
+  gap: calc(5 * var(--pt)) calc(10 * var(--pt));
+}
+.tiers > img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.tiers .card { font-size: calc(8 * var(--pt)); line-height: 1.18; padding: calc(5 * var(--pt)) calc(10 * var(--pt)); gap: calc(3 * var(--pt)); }
+.tiers .card h3 { font-size: calc(10.5 * var(--pt)); color: color-mix(in srgb, var(--c) 80%, black); }
+.tiers .card h3 span { font-weight: 400; font-style: italic; }
+.srcs { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: calc(12 * var(--pt)); }
+.srcs b { display: block; margin-bottom: calc(1 * var(--pt)); font-size: calc(7 * var(--pt)); color: var(--navy); }
+
+/* Due colonne a confronto (es. pratiche vietate / consentite): card tinta con elenco di voci */
+.duo { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: calc(10 * var(--pt)); }
+.duo .card { background: color-mix(in srgb, var(--c) 5%, white); font-size: calc(8.5 * var(--pt)); line-height: 1.2; padding: calc(7 * var(--pt)) calc(11 * var(--pt)); gap: calc(4 * var(--pt)); }
+.duo .card-top img { flex: none; height: calc(32 * var(--pt)); width: auto; }
+.duo .card h3 { font-size: calc(13 * var(--pt)); color: color-mix(in srgb, var(--c) 80%, black); }
+.rows { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.row { flex: 1; display: flex; align-items: center; gap: calc(9 * var(--pt)); padding: calc(3 * var(--pt)) 0; border-top: calc(1 * var(--pt)) solid color-mix(in srgb, var(--c) 25%, white); }
+.row .ico { width: calc(24 * var(--pt)); height: calc(24 * var(--pt)); background: var(--white); border: calc(1 * var(--pt)) solid color-mix(in srgb, var(--c) 30%, white); }
+.row b { display: block; margin-bottom: calc(1 * var(--pt)); font-size: calc(9.5 * var(--pt)); color: var(--navy); }
+.row .art { margin: calc(2 * var(--pt)) 0 0; font-size: calc(7 * var(--pt)); }
+
+/* Distintivo illustrato (immagine tonda) al posto dell'icona, nell'intestazione della card */
+.card-top > img.badge { flex: none; height: calc(30 * var(--pt)); width: auto; }
+.cards.sm .card-top > img.badge { height: calc(26 * var(--pt)); }
+
+.note > img.badge { flex: none; height: calc(26 * var(--pt)); width: auto; }
+
+/* Fasi in sequenza: frecce colorate affiancate, con icona e nome della fase */
+.steps { flex: none; display: flex; height: calc(30 * var(--pt)); }
+.steps > div {
+  --c: var(--blue);
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: calc(6 * var(--pt));
+  margin-left: calc(-7 * var(--pt)); padding-left: calc(8 * var(--pt));
+  background: var(--c); color: var(--white); font-weight: 700; font-size: calc(10.5 * var(--pt)); line-height: 1;
+  clip-path: polygon(0 0, calc(100% - 11 * var(--pt)) 0, 100% 50%, calc(100% - 11 * var(--pt)) 100%, 0 100%, calc(11 * var(--pt)) 50%);
+}
+.steps > div:first-child { margin-left: 0; padding-left: 0; border-radius: var(--r) 0 0 var(--r); clip-path: polygon(0 0, calc(100% - 11 * var(--pt)) 0, 100% 50%, calc(100% - 11 * var(--pt)) 100%, 0 100%); }
+.steps img { height: calc(15 * var(--pt)); width: auto; }
+.steps span { opacity: .75; font-weight: 400; }
+
 /* Utilità */
 .grow { flex: 1; min-height: 0; }
 

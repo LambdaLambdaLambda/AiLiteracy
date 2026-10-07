@@ -3,41 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>20. I Ruoli del GDPR a scuola</title>
+  <title>19. I Ruoli del GDPR</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="viewport">
   <main class="slide">
     <img class="logo-eft" src="assets/eft-veneto.png" alt="Équipe Formativa Veneto">
-    <h1 class="slide-title">I Ruoli del GDPR a scuola</h1>
+    <h1 class="slide-title">I Ruoli del GDPR</h1>
     <div class="line-top"></div>
     <a class="nav nav-prev" aria-label="Pagina precedente"><svg viewBox="0 0 24 24"><polyline points="15,4 7,12 15,20"/></svg></a>
     <a class="nav nav-next" aria-label="Pagina successiva"><svg viewBox="0 0 24 24"><polyline points="9,4 17,12 9,20"/></svg></a>
     <div class="content">
       <div class="body">
-<div class="cards x2 dense">
- <section class="card c-blue"><div class="card-top"><i class="ico i-user"></i><div><span class="art">Art. 4, n. 7; Artt. 24, 25</span><h3>Titolare del trattamento</h3><div class="sub">Istituzione Scolastica</div></div></div><div class="card-body"><ul>
-  <li>Agisce attraverso il <strong>Dirigente Scolastico</strong>, suo legale rappresentante.</li>
-  <li>Determina finalità e mezzi del trattamento (es. registro elettronico, strumenti di IA nel PTOF).</li>
-  <li>Garantisce l’<em>accountability</em>: DPIA, Registro dei trattamenti, misure di sicurezza.</li>
-  <li>Nei servizi ministeriali (es. Piattaforma Unica) il <strong>MIM</strong> può essere Titolare autonomo per accessi e autenticazione.</li>
- </ul></div></section>
- <section class="card c-green"><div class="card-top"><i class="ico i-settings"></i><div><span class="art">Art. 4, n. 8; Art. 28</span><h3>Responsabile del trattamento</h3><div class="sub">Fornitori esterni di servizi digitali</div></div></div><div class="card-body"><ul>
-  <li>Trattano dati <strong>per conto della scuola</strong>: registro elettronico, piattaforme in cloud, soluzioni di IA, Sogei per i sistemi del Ministero.</li>
-  <li>Con ciascuno serve un <strong>contratto o atto giuridico</strong> con istruzioni vincolanti e misure tecniche adeguate.</li>
-  <li>Dati usati solo per le finalità pattuite: vietato riutilizzare prompt e dati degli studenti per addestrare modelli di IA commerciali.</li>
- </ul></div></section>
- <section class="card c-green"><div class="card-top"><i class="ico i-user-check"></i><div><span class="art">Art. 29; Art. 2-quaterdecies Cod. Privacy</span><h3>Soggetti Autorizzati / Incaricati</h3><div class="sub">Docenti e personale ATA</div></div></div><div class="card-body"><ul>
-  <li><strong>Docenti</strong>: didattica, valutazione, registro elettronico, uso guidato di strumenti digitali e IA in classe.</li>
-  <li><strong>Personale ATA e amministrativo</strong> (coordinato dal DSGA): pratiche amministrative, iscrizioni, fascicoli del personale, contabilità.</li>
-  <li>Ricevono dal Dirigente una <strong>designazione formale</strong> con istruzioni su minimizzazione, riservatezza, custodia delle credenziali e regole sull’IA.</li>
- </ul></div></section>
- <section class="card c-purple"><div class="card-top"><i class="ico i-smile"></i><div><span class="art">Artt. 12–22</span><h3>Interessato</h3><div class="sub">Studenti, famiglie, docenti e personale ATA</div></div></div><div class="card-body"><ul>
-  <li><strong>Studenti e famiglie</strong>: i minori sono soggetti vulnerabili; sotto i 14 anni serve il consenso dei genitori.</li>
-  <li><strong>Docenti e personale ATA</strong>, in quanto lavoratori della PA.</li>
-  <li><strong>Diritti</strong>: informativa chiara (anche per i minori), accesso, rettifica, opposizione, <em>opt-out</em> dall’addestramento di modelli di IA, spiegazione delle logiche algoritmiche (art. 86 AI Act).</li>
- </ul></div></section>
+<div class="legend"><span class="c-blue">Decidono</span><span class="c-green">Trattano i dati</span><span class="c-orange">Vigilano e consigliano</span><span class="c-purple">Tutelato</span></div>
+<div class="cards">
+ <section class="card c-blue"><div class="card-top"><i class="ico i-user"></i><div><span class="art">Art. 4, n. 7; Artt. 24, 25</span><h3>Titolare del trattamento</h3><div class="sub">Data Controller</div></div></div><div class="card-body"><p>Persona fisica, giuridica o autorità pubblica che determina finalità e mezzi del trattamento. Ha la responsabilità generale di conformità e sicurezza dei dati.</p></div></section>
+ <section class="card c-green"><div class="card-top"><i class="ico i-settings"></i><div><span class="art">Art. 4, n. 8; Art. 28</span><h3>Responsabile del trattamento</h3><div class="sub">Data Processor</div></div></div><div class="card-body"><p>Soggetto esterno che tratta i dati per conto del Titolare sulla base di un contratto o atto giuridico. Deve offrire garanzie sufficienti di sicurezza.</p></div></section>
+ <section class="card c-green"><div class="card-top"><i class="ico i-user-check"></i><div><span class="art">Art. 29; Art. 2-quaterdecies Cod. Privacy</span><h3>Soggetti Autorizzati / Incaricati</h3></div></div><div class="card-body"><p>Persone fisiche che operano sotto l’autorità del Titolare o del Responsabile (es. docenti, personale amministrativo) secondo specifiche istruzioni.</p></div></section>
+ <section class="card c-orange"><div class="card-top"><i class="ico i-shield-check"></i><div><span class="art">Artt. 37–39</span><h3>DPO / RPD</h3><div class="sub">Data Protection Officer</div></div></div><div class="card-body"><p>Figura indipendente di consulenza, sorveglianza e punto di contatto con Garante e interessati. Obbligatorio per le PA (scuole incluse) e per trattamenti su larga scala.</p></div></section>
+ <section class="card c-orange"><div class="card-top"><i class="ico i-landmark"></i><div><span class="art">Artt. 51, 57, 58; Art. 2-bis Cod. Privacy</span><h3>Autorità di Controllo</h3><div class="sub">Garante Privacy</div></div></div><div class="card-body"><p>Autorità pubblica indipendente (in Italia, il Garante) che vigila sull’applicazione del GDPR, gestisce i reclami e irroga sanzioni.</p></div></section>
+ <section class="card c-purple"><div class="card-top"><i class="ico i-smile"></i><div><span class="art">Artt. 12–22</span><h3>Interessato</h3></div></div><div class="card-body"><p>Persona fisica a cui si riferiscono i dati (es. studente, genitore, docente). Titolare dei diritti di accesso, rettifica, cancellazione, limitazione e opposizione.</p></div></section>
 </div>
       </div>
     </div>
