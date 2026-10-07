@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9. Quadro normativo Europeo /2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="viewport">
+  <main class="slide">
+    <img class="logo-eft" src="assets/eft-veneto.png" alt="Équipe Formativa Veneto">
+    <h1 class="slide-title">Quadro normativo Europeo /2</h1>
+    <div class="line-top"></div>
+    <a class="nav nav-prev" href="slide-08.html" aria-label="Pagina precedente"><svg viewBox="0 0 24 24"><polyline points="15,4 7,12 15,20"/></svg></a>
+    <a class="nav nav-next" href="slide-10.html" aria-label="Pagina successiva"><svg viewBox="0 0 24 24"><polyline points="9,4 17,12 9,20"/></svg></a>
+    <div class="content">
+      <div class="body">
+<div class="mm grow" style=""><pre class="mermaid">
+%%{init: {"flowchart":{"rankSpacing":24,"nodeSpacing":24,"padding":6,"wrappingWidth":300}}}%%
+graph TD
+  CARTA["<b>CARTA DEI DIRITTI FONDAMENTALI DELL'UNIONE EUROPEA</b><br/>FONDAMENTO GIURIDICO UNICO"]
+  GDPR["<b>GDPR (Reg. UE 2016/679)</b><br/>TUTELA DEI DATI PERSONALI<br/>PRINCIPI: Liceità, correttezza, trasparenza, minimizzazione<br/>DIRITTI DEGLI INTERESSATI: Accesso, rettifica, cancellazione<br/>VALUTAZIONE DI IMPATTO (DPIA)"]
+  AIACT["<b>AI ACT (Reg. UE 2024/1689)</b><br/>REGOLAZIONE DELL'INTELLIGENZA ARTIFICIALE<br/>GESTIONE DEL RISCHIO (approccio basato sul rischio)<br/>SISTEMI AD ALTO RISCHIO<br/>REQUISITI PER FORNITORI E DEPLOYER<br/>TRASPARENZA PER ALCUNI SISTEMI"]
+  INT["<b>INTERCONNESSIONE E COORDINAMENTO</b><br/>RECIPROCO RISPETTO DEGLI OBBLIGHI"]
+  CARTA --> GDPR
+  CARTA --> AIACT
+  GDPR --> INT
+  AIACT --> INT
+  classDef top fill:#EBF2FA,stroke:#B79B49,stroke-width:2px,color:#1F3A5F
+  classDef reg fill:#FFFFFF,stroke:#1F3A5F,stroke-width:2px,color:#1F2937
+  classDef link fill:#FFFFFF,stroke:#C0392B,stroke-width:2px,color:#1F3A5F
+  class CARTA top
+  class GDPR,AIACT reg
+  class INT link
+</pre></div>
+      </div>
+    </div>
+    <div class="line-bottom"></div>
+    <img class="footer-banner" src="assets/futura-inlinea.png" alt="Futura – La scuola per l'Italia di domani · Finanziato dall'Unione europea · Ministero dell'Istruzione e del Merito · Italia domani">
+  </main>
+</div>
+<script src="vendor/mermaid.min.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -61,6 +61,21 @@ html, body { margin: 0; height: 100%; background: var(--white); overflow: hidden
   right: calc(26 * var(--pt)); top: calc(6 * var(--pt));
   height: calc(48 * var(--pt)); width: auto;
 }
+/* Formatore: foto tonda (alto a sinistra) con il nome sotto */
+.slide::before {
+  content: ""; position: absolute;
+  left: calc(15 * var(--pt)); top: calc(4 * var(--pt));
+  width: calc(40 * var(--pt)); height: calc(40 * var(--pt));
+  border-radius: 50%; border: calc(1 * var(--pt)) solid var(--line);
+  background: var(--tint) url('assets/Foto%20profilo%20Alberto%20Carraro.png') center 38% / 150% auto no-repeat;
+}
+.slide::after {
+  content: "Alberto Carraro"; position: absolute;
+  left: calc(4 * var(--pt)); top: calc(46 * var(--pt));
+  width: calc(62 * var(--pt)); text-align: center; white-space: nowrap;
+  font-size: calc(7 * var(--pt)); font-weight: 700; line-height: 1.2;
+  color: var(--navy);
+}
 .line-top {                           /* linea oro, tutta la larghezza */
   position: absolute; left: 0; right: 0; top: calc(62 * var(--pt));
   height: 3px; background: var(--gold);
@@ -86,8 +101,8 @@ html, body { margin: 0; height: 100%; background: var(--white); overflow: hidden
 }
 
 /* ---------- Tipografia ---------- */
-.slide-title {                        /* sempre sopra la linea oro, a sinistra del logo */
-  position: absolute; left: calc(46 * var(--pt)); top: 0;
+.slide-title {                        /* sempre sopra la linea oro, tra la foto del formatore e il logo */
+  position: absolute; left: calc(72 * var(--pt)); top: 0;
   right: calc(26 * var(--pt) + 99 * var(--pt) + 16 * var(--pt));
   height: calc(62 * var(--pt)); padding-bottom: calc(4 * var(--pt));
   display: flex; align-items: flex-end;
