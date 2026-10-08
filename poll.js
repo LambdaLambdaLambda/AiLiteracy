@@ -54,6 +54,7 @@
 
   window.pollRender = records => {
     total.textContent = records.length;
+    box.querySelector(".poll-total-label").textContent = records.length === 1 ? "risposta ricevuta" : "risposte ricevute";
     charts.forEach(el => {
       const field = records.length ? fieldOf(records[0], el.dataset.question) : null;
       draw(el, field ? records.map(r => String(r[field] ?? '').trim()).filter(Boolean) : []);

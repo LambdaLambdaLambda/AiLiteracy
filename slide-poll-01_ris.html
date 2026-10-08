@@ -17,8 +17,7 @@
       <div class="body">
 <div class="poll-results" data-words="7">
  <div class="poll-head">
-  <div class="stat"><span class="n poll-total">–</span>risposte ricevute</div>
-  <button type="button" class="tag poll-connect" hidden>Accedi con Google per leggere le risposte</button>
+  <div class="stat"><span class="n poll-total">–</span><span class="poll-total-label">risposte ricevute</span></div>
   <div class="poll-status"></div>
  </div>
  <div class="cards">
@@ -36,142 +35,60 @@
 <script src="nav.js"></script>
 <script src="poll.js"></script>
 <script>
-// Lettura della tabella "Form_Responses" dal foglio Google delle risposte, con la Google Sheets API v4.
-// L'accesso avviene nel browser con Google Identity Services: serve solo il Client ID (pubblico),
-// mai il client secret. La pagina va aperta da un indirizzo http(s) elencato tra le
-// "Origini JavaScript autorizzate" del client OAuth (non funziona da file://).
-const CLIENT_ID = '652815275176-n17h3utotonh09fbt7015pn919sh05em.apps.googleusercontent.com';
+// Lettura della tabella "Form_Responses" dal foglio Google delle risposte.
+// Il foglio è condiviso con "chiunque abbia il link", quindi la scheda si scarica come CSV
+// senza bisogno di accesso. La pagina va aperta da un server web (http/https), non da file://.
 const SPREADSHEET_ID = '1bKw83ar58o5PSWe8Q6JQNnkK5cWAGgrvl6C2qTtfZj8';
-const SHEET_GID = 271731494;              // scheda del foglio che contiene la tabella
-const TABLE_NAME = 'Form_Responses';
-const SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
-const API = 'https://sheets.googleapis.com/v4/spreadsheets/' + SPREADSHEET_ID;
+const SHEET_GID = 271731494;              // scheda del foglio che contiene la tabella Form_Responses
+const CSV_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/export?format=csv&gid=${SHEET_GID}`;
 const REFRESH_SECONDS = 20;
-const TOKEN_KEY = 'poll-token';
 
 let formResponses = [];                   // lista di record: un oggetto per risposta, campi = nomi delle colonne
-let tokenClient = null, timer = null;
-const connectButton = document.querySelector('.poll-connect');
 
-// Token di accesso: resta valido circa un'ora; lo si tiene per la sessione, così i ricaricamenti non richiedono un nuovo accesso
-function savedToken() {
-  try {
-    const t = JSON.parse(sessionStorage.getItem(TOKEN_KEY));
-    return t && t.expires > Date.now() + 60000 ? t.value : null;
-  } catch (e) { return null; }
-}
-function saveToken(resp) {
-  try { sessionStorage.setItem(TOKEN_KEY, JSON.stringify({ value: resp.access_token, expires: Date.now() + resp.expires_in * 1000 })); } catch (e) {}
-}
-function forgetToken() { try { sessionStorage.removeItem(TOKEN_KEY); } catch (e) {} }
-
-async function api(path, token) {
-  const res = await fetch(API + path, { headers: { Authorization: 'Bearer ' + token } });
-  if (!res.ok) { const err = new Error('HTTP ' + res.status); err.status = res.status; throw err; }
-  return res.json();
-}
-
-// Indice di colonna (0 = A) → lettera/e della colonna
-function columnLetter(i) {
-  let s = '';
-  for (i++; i > 0; i = Math.floor((i - 1) / 26)) s = String.fromCharCode(65 + (i - 1) % 26) + s;
-  return s;
-}
-
-// Intervallo A1 della tabella: la si cerca per nome tra le tabelle del foglio;
-// se non c'è, si legge l'intera scheda indicata da SHEET_GID
-async function tableRange(token) {
-  let meta;
-  try { meta = await api('?fields=sheets(properties(sheetId,title),tables(name,range))', token); }
-  catch (e) {                             // se l'elenco delle tabelle non è disponibile, bastano le schede
-    if (e.status !== 400) throw e;
-    meta = await api('?fields=sheets(properties(sheetId,title))', token);
+// CSV con campi tra virgolette, virgole e ritorni a capo dentro le risposte
+function parseCsv(text) {
+  const rows = []; let row = [], cell = '', quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (quoted) {
+      if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; }
+      else if (ch === '"') quoted = false;
+      else cell += ch;
+    } else if (ch === '"') quoted = true;
+    else if (ch === ',') { row.push(cell); cell = ''; }
+    else if (ch === '\n') { row.push(cell); rows.push(row); row = []; cell = ''; }
+    else if (ch !== '\r') cell += ch;
   }
-  const sheets = meta.sheets || [];
-  const quote = title => "'" + title.replace(/'/g, "''") + "'";
-  for (const sheet of sheets) {
-    const table = (sheet.tables || []).find(t => t.name === TABLE_NAME);
-    if (table) {
-      const r = table.range || {};
-      const from = columnLetter(r.startColumnIndex || 0) + ((r.startRowIndex || 0) + 1);
-      const to = (r.endColumnIndex ? columnLetter(r.endColumnIndex - 1) : '') + (r.endRowIndex || '');
-      return quote(sheet.properties.title) + '!' + from + (to ? ':' + to : '');
-    }
-  }
-  const sheet = sheets.find(s => s.properties.sheetId === SHEET_GID) || sheets[0];
-  if (!sheet) throw new Error('Il foglio non contiene schede');
-  return quote(sheet.properties.title);
+  if (cell !== '' || row.length) { row.push(cell); rows.push(row); }
+  return rows;
 }
 
 // Legge la tabella e la trasforma in lista di record
-async function readFormResponses(token) {
-  const range = await tableRange(token);
-  const data = await api('/values/' + encodeURIComponent(range) + '?majorDimension=ROWS', token);
-  const [header = [], ...rows] = data.values || [];
+async function readFormResponses() {
+  const res = await fetch(CSV_URL, { cache: 'no-store' });
+  if (!res.ok) { const err = new Error('HTTP ' + res.status); err.status = res.status; throw err; }
+  const [header = [], ...rows] = parseCsv(await res.text());
   return rows
-    .filter(row => row.some(cell => String(cell).trim() !== ''))
+    .filter(row => row.some(cell => cell.trim() !== ''))
     .map(row => Object.fromEntries(header.map((name, i) => [name.trim(), row[i] ?? ''])));
 }
 
 async function refresh() {
-  const token = savedToken();
-  if (!token) { askAccess(); return; }
   try {
-    formResponses = await readFormResponses(token);
+    formResponses = await readFormResponses();
     window.formResponses = formResponses;
     pollRender(formResponses);
     const now = new Date().toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
     pollStatus(`Aggiornato alle ${now} · si aggiorna da solo ogni ${REFRESH_SECONDS} secondi`);
   } catch (e) {
-    if (e.status === 401) { forgetToken(); askAccess(); }
-    else if (e.status === 403) pollStatus('Accesso negato: l’account usato non può leggere il foglio, oppure la Google Sheets API non è abilitata nel progetto.');
-    else if (e.status === 404) pollStatus('Foglio non trovato: controlla l’identificativo del foglio.');
-    else pollStatus('Non riesco a leggere le risposte (' + e.message + '). Nuovo tentativo tra poco.');
+    if (location.protocol === 'file:') pollStatus('Apri questa pagina da un server web (ad esempio http://localhost:8000): da file:// il browser blocca la lettura del foglio.');
+    else if (e.status) pollStatus('Non riesco a leggere il foglio (' + e.message + '): controlla che sia ancora condiviso con chiunque abbia il link.');
+    else pollStatus('Non riesco a leggere il foglio: controlla la connessione e che sia ancora condiviso con chiunque abbia il link.');
   }
 }
 
-function start() {
-  connectButton.hidden = true;
-  refresh();
-  clearInterval(timer);
-  timer = setInterval(refresh, REFRESH_SECONDS * 1000);
-}
-
-// Chiede il token; se il browser blocca la finestra di accesso, mostra il pulsante da premere
-function askAccess() {
-  clearInterval(timer);
-  if (!tokenClient) return;
-  pollStatus('Accesso a Google in corso…');
-  tokenClient.requestAccessToken({ prompt: '' });
-}
-
-function initGoogle() {
-  tokenClient = google.accounts.oauth2.initTokenClient({
-    client_id: CLIENT_ID,
-    scope: SCOPE,
-    callback: resp => {
-      if (resp.error) { pollStatus('Accesso non riuscito: ' + resp.error); connectButton.hidden = false; return; }
-      saveToken(resp);
-      start();
-    },
-    error_callback: () => {
-      pollStatus('Per leggere le risposte serve l’accesso con l’account Google che possiede il foglio.');
-      connectButton.hidden = false;
-    }
-  });
-  connectButton.addEventListener('click', () => tokenClient.requestAccessToken({ prompt: '' }));
-  if (savedToken()) start(); else askAccess();
-}
-
-if (location.protocol === 'file:') {
-  pollStatus('Apri questa pagina da un server web (ad esempio http://localhost:8000): l’accesso a Google non funziona da file://.');
-} else {
-  const gis = document.createElement('script');
-  gis.src = 'https://accounts.google.com/gsi/client';
-  gis.onload = initGoogle;
-  gis.onerror = () => pollStatus('Non riesco a caricare i servizi di accesso di Google: controlla la connessione.');
-  document.head.appendChild(gis);
-}
+refresh();
+setInterval(refresh, REFRESH_SECONDS * 1000);
 </script>
 </body>
 </html>
