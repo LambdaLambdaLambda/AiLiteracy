@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sondaggio · Le vostre risposte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="viewport">
+  <main class="slide">
+    <img class="logo-eft" src="assets/eft-veneto.png" alt="Équipe Formativa Veneto">
+    <h1 class="slide-title">Le vostre risposte</h1>
+    <div class="line-top"></div>
+    <a class="nav nav-prev" href="slide-poll-01_dom.html" aria-label="Pagina precedente"><svg viewBox="0 0 24 24"><polyline points="15,4 7,12 15,20"/></svg></a>
+    <div class="content">
+      <div class="body">
+<div class="poll-results" data-words="7">
+ <div class="poll-head">
+  <div class="stat"><span class="n poll-total">–</span>risposte ricevute</div>
+  <button type="button" class="tag poll-connect" hidden>Accedi con Google per leggere le risposte</button>
+  <div class="poll-status"></div>
+ </div>
+ <div class="cards">
+  <section class="card c-blue" data-question="Quale concetto importante hai appreso oggi in classe?"><div class="card-top"><i class="ico num">1</i><div><h3>Quale concetto importante hai appreso oggi in classe?</h3><div class="poll-n"></div></div></div><div class="poll-kicker">Parole più frequenti</div><div class="bars"></div></section>
+  <section class="card c-green" data-question="Ti sentivi preparato per la lezione di oggi? Perché?"><div class="card-top"><i class="ico num">2</i><div><h3>Ti sentivi preparato per la lezione di oggi? Perché?</h3><div class="poll-n"></div></div></div><div class="poll-kicker">Parole più frequenti</div><div class="bars"></div></section>
+  <section class="card c-orange" data-question="Come si potrebbe rendere la lezione di oggi più efficace?"><div class="card-top"><i class="ico num">3</i><div><h3>Come si potrebbe rendere la lezione di oggi più efficace?</h3><div class="poll-n"></div></div></div><div class="poll-kicker">Parole più frequenti</div><div class="bars"></div></section>
+ </div>
+</div>
+      </div>
+    </div>
+    <div class="line-bottom"></div>
+    <img class="footer-banner" src="assets/futura-inlinea.png" alt="Futura – La scuola per l'Italia di domani · Finanziato dall'Unione europea · Ministero dell'Istruzione e del Merito · Italia domani">
+  </main>
+</div>
+<script src="nav.js"></script>
+<script src="poll.js"></script>
+<script>
+// Lettura della tabella "Form_Responses" dal foglio Google delle risposte, con la Google Sheets API v4.
+// L'accesso avviene nel browser con Google Identity Services: serve solo il Client ID (pubblico),
+// mai il client secret. La pagina va aperta da un indirizzo http(s) elencato tra le
+// "Origini JavaScript autorizzate" del client OAuth (non funziona da file://).
+const CLIENT_ID = '652815275176-n17h3utotonh09fbt7015pn919sh05em.apps.googleusercontent.com';
+const SPREADSHEET_ID = '1bKw83ar58o5PSWe8Q6JQNnkK5cWAGgrvl6C2qTtfZj8';
+const SHEET_GID = 271731494;              // scheda del foglio che contiene la tabella
+const TABLE_NAME = 'Form_Responses';
+const SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+const API = 'https://sheets.googleapis.com/v4/spreadsheets/' + SPREADSHEET_ID;
+const REFRESH_SECONDS = 20;
+const TOKEN_KEY = 'poll-token';
+
+let formResponses = [];                   // lista di record: un oggetto per risposta, campi = nomi delle colonne
+let tokenClient = null, timer = null;
+const connectButton = document.querySelector('.poll-connect');
+
+// Token di accesso: resta valido circa un'ora; lo si tiene per la sessione, così i ricaricamenti non richiedono un nuovo accesso
+function savedToken() {
+  try {
+    const t = JSON.parse(sessionStorage.getItem(TOKEN_KEY));
+    return t && t.expires > Date.now() + 60000 ? t.value : null;
+  } catch (e) { return null; }
+}
+function saveToken(resp) {
+  try { sessionStorage.setItem(TOKEN_KEY, JSON.stringify({ value: resp.access_token, expires: Date.now() + resp.expires_in * 1000 })); } catch (e) {}
+}
+function forgetToken() { try { sessionStorage.removeItem(TOKEN_KEY); } catch (e) {} }
+
+async function api(path, token) {
+  const res = await fetch(API + path, { headers: { Authorization: 'Bearer ' + token } });
+  if (!res.ok) { const err = new Error('HTTP ' + res.status); err.status = res.status; throw err; }
+  return res.json();
+}
+
+// Indice di colonna (0 = A) → lettera/e della colonna
+function columnLetter(i) {
+  let s = '';
+  for (i++; i > 0; i = Math.floor((i - 1) / 26)) s = String.fromCharCode(65 + (i - 1) % 26) + s;
+  return s;
+}
+
+// Intervallo A1 della tabella: la si cerca per nome tra le tabelle del foglio;
+// se non c'è, si legge l'intera scheda indicata da SHEET_GID
+async function tableRange(token) {
+  let meta;
+  try { meta = await api('?fields=sheets(properties(sheetId,title),tables(name,range))', token); }
+  catch (e) {                             // se l'elenco delle tabelle non è disponibile, bastano le schede
+    if (e.status !== 400) throw e;
+    meta = await api('?fields=sheets(properties(sheetId,title))', token);
+  }
+  const sheets = meta.sheets || [];
+  const quote = title => "'" + title.replace(/'/g, "''") + "'";
+  for (const sheet of sheets) {
+    const table = (sheet.tables || []).find(t => t.name === TABLE_NAME);
+    if (table) {
+      const r = table.range || {};
+      const from = columnLetter(r.startColumnIndex || 0) + ((r.startRowIndex || 0) + 1);
+      const to = (r.endColumnIndex ? columnLetter(r.endColumnIndex - 1) : '') + (r.endRowIndex || '');
+      return quote(sheet.properties.title) + '!' + from + (to ? ':' + to : '');
+    }
+  }
+  const sheet = sheets.find(s => s.properties.sheetId === SHEET_GID) || sheets[0];
+  if (!sheet) throw new Error('Il foglio non contiene schede');
+  return quote(sheet.properties.title);
+}
+
+// Legge la tabella e la trasforma in lista di record
+async function readFormResponses(token) {
+  const range = await tableRange(token);
+  const data = await api('/values/' + encodeURIComponent(range) + '?majorDimension=ROWS', token);
+  const [header = [], ...rows] = data.values || [];
+  return rows
+    .filter(row => row.some(cell => String(cell).trim() !== ''))
+    .map(row => Object.fromEntries(header.map((name, i) => [name.trim(), row[i] ?? ''])));
+}
+
+async function refresh() {
+  const token = savedToken();
+  if (!token) { askAccess(); return; }
+  try {
+    formResponses = await readFormResponses(token);
+    window.formResponses = formResponses;
+    pollRender(formResponses);
+    const now = new Date().toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    pollStatus(`Aggiornato alle ${now} · si aggiorna da solo ogni ${REFRESH_SECONDS} secondi`);
+  } catch (e) {
+    if (e.status === 401) { forgetToken(); askAccess(); }
+    else if (e.status === 403) pollStatus('Accesso negato: l’account usato non può leggere il foglio, oppure la Google Sheets API non è abilitata nel progetto.');
+    else if (e.status === 404) pollStatus('Foglio non trovato: controlla l’identificativo del foglio.');
+    else pollStatus('Non riesco a leggere le risposte (' + e.message + '). Nuovo tentativo tra poco.');
+  }
+}
+
+function start() {
+  connectButton.hidden = true;
+  refresh();
+  clearInterval(timer);
+  timer = setInterval(refresh, REFRESH_SECONDS * 1000);
+}
+
+// Chiede il token; se il browser blocca la finestra di accesso, mostra il pulsante da premere
+function askAccess() {
+  clearInterval(timer);
+  if (!tokenClient) return;
+  pollStatus('Accesso a Google in corso…');
+  tokenClient.requestAccessToken({ prompt: '' });
+}
+
+function initGoogle() {
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: CLIENT_ID,
+    scope: SCOPE,
+    callback: resp => {
+      if (resp.error) { pollStatus('Accesso non riuscito: ' + resp.error); connectButton.hidden = false; return; }
+      saveToken(resp);
+      start();
+    },
+    error_callback: () => {
+      pollStatus('Per leggere le risposte serve l’accesso con l’account Google che possiede il foglio.');
+      connectButton.hidden = false;
+    }
+  });
+  connectButton.addEventListener('click', () => tokenClient.requestAccessToken({ prompt: '' }));
+  if (savedToken()) start(); else askAccess();
+}
+
+if (location.protocol === 'file:') {
+  pollStatus('Apri questa pagina da un server web (ad esempio http://localhost:8000): l’accesso a Google non funziona da file://.');
+} else {
+  const gis = document.createElement('script');
+  gis.src = 'https://accounts.google.com/gsi/client';
+  gis.onload = initGoogle;
+  gis.onerror = () => pollStatus('Non riesco a caricare i servizi di accesso di Google: controlla la connessione.');
+  document.head.appendChild(gis);
+}
+</script>
+</body>
+</html>

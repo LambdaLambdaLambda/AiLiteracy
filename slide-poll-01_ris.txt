@@ -1,0 +1,21 @@
+Ho un google sheet di nome "slide-poll-01 (Risposte)" identificato dal seguente link:
+
+https://docs.google.com/spreadsheets/d/1bKw83ar58o5PSWe8Q6JQNnkK5cWAGgrvl6C2qTtfZj8/edit?resourcekey=&gid=271731494#gid=271731494
+
+Il foglio contiene una tabella dal nome "Form_Responses" che ha le seguenti colonne:
+"Informazioni cronologiche"
+"Nome"
+"Email" 
+"Quale concetto importante hai appreso oggi in classe?"
+"Ti sentivi preparato per la lezione di oggi? Perché?"
+"Come si potrebbe rendere la lezione di oggi più efficace?"
+
+Cerca in Internet quali sono le API Google per Google sheets utilizzate adesso e documentati su come possono essere invocate lato client.
+
+Sulla piattaforma https://console.cloud.google.com/ ho creato un progetto dal nome macautomationpeekaboo per il quale ho abilitato l'API di Google Sheets.
+
+Questa abilitazione mi ha permesso di scaricare la chiave dentro il file 
+
+client_secret_652815275176-n17h3utotonh09fbt7015pn919sh05em.apps.googleusercontent.com.json
+
+Nella pagina "slide-poll-01_ris.html" scrivi codice javascript per fare in modo che quando viene caricata questa pagina la tabella "Form_Responses" venga letta e caricata in una struttura dati javascript (una lista di record i cui nomi dei campi sono i nomi delle colonne).
