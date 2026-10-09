@@ -456,6 +456,15 @@ pre.mermaid .cluster-label .nodeLabel, pre.mermaid .cluster-label span { font-we
 button.tag { border: 0; cursor: pointer; font-family: inherit; align-self: center; }
 .tag[hidden] { display: none; }
 
+/* Scheda operativa: dentro la card, illustrazione a sinistra e voci (.rows) a destra */
+.sheet { flex: 1; min-height: 0; display: flex; align-items: center; gap: calc(10 * var(--pt)); }
+.sheet > img { flex: none; width: calc(66 * var(--pt)); max-height: 100%; object-fit: contain; }
+.sheet .rows { align-self: stretch; }
+.sheet .row { padding: calc(2 * var(--pt)) 0; }
+.sheet .row b { display: inline; margin-right: .3em; font-size: calc(8.5 * var(--pt)); }       /* etichetta e testo sulla stessa riga */
+.sheet .row .art { margin-top: 0; }
+.cards.sm .card:has(.sheet) .ico { width: calc(18 * var(--pt)); height: calc(18 * var(--pt)); font-size: calc(11 * var(--pt)); }
+
 /* Utilità */
 .grow { flex: 1; min-height: 0; }
 
