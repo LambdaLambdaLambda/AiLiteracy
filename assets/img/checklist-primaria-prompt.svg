@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 108">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#49A874"/><stop offset="1" stop-color="#2E8B57"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9534A"/><stop offset="1" stop-color="#A93226"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E09A3A"/><stop offset="1" stop-color="#C9761A"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A7DB0"/><stop offset="1" stop-color="#2F5D8A"/></linearGradient>
+    <linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5C8A"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C72E0"/><stop offset="1" stop-color="#6F4FD1"/></linearGradient>
+    <marker id="an" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.500" markerHeight="4.500" orient="auto"><path d="M0 0l10 5-10 5z" fill="#1F3A5F"/></marker>
+  </defs>
+<rect x="8" y="18" width="84" height="56" rx="7" fill="#FFFFFF" stroke="#C0392B" stroke-width="2.500"/>
+<g transform="translate(16 26) scale(1.050)" fill="none" stroke="#C0392B" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></g><path d="M50 34h30M50 44h22M20 62h56" stroke="#F2C4BE" stroke-width="4" stroke-linecap="round"/>
+<circle cx="90" cy="20" r="10" fill="url(#gr)" stroke="#FFFFFF" stroke-width="2"/><path d="M86 16l8 8M94 16l-8 8" fill="none" stroke="#FFFFFF" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M99 46h10" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" marker-end="url(#an)"/>
+<rect x="118" y="18" width="84" height="56" rx="7" fill="#FFFFFF" stroke="#2E8B57" stroke-width="2.500"/>
+<circle cx="134" cy="38" r="3.200" fill="#2E8B57"/><circle cx="146" cy="38" r="3.200" fill="#2E8B57"/><circle cx="158" cy="38" r="3.200" fill="#2E8B57"/><path d="M130 52h60M130 62h42" stroke="#BFE0CD" stroke-width="4" stroke-linecap="round"/>
+<circle cx="200" cy="20" r="10" fill="url(#gg)" stroke="#FFFFFF" stroke-width="2"/><path d="M195.5 20.5l3.200 3.200 5.800-6.600" fill="none" stroke="#FFFFFF" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M209 46h10" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" marker-end="url(#an)"/>
+<circle cx="258" cy="46" r="26" fill="url(#gb)"/><circle cx="258" cy="46" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(244 32) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
+<text x="50" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#A93226">Dati dell’alunno</text>
+<text x="160" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F6B41">Testo anonimo</text>
+<text x="258" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F3A5F">Area protetta</text>
+</svg>

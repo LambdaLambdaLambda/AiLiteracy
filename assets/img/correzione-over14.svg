@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#49A874"/><stop offset="1" stop-color="#2E8B57"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9534A"/><stop offset="1" stop-color="#A93226"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E09A3A"/><stop offset="1" stop-color="#C9761A"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A7DB0"/><stop offset="1" stop-color="#2F5D8A"/></linearGradient>
+    <linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5C8A"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C72E0"/><stop offset="1" stop-color="#6F4FD1"/></linearGradient>
+    <marker id="an" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.500" markerHeight="4.500" orient="auto"><path d="M0 0l10 5-10 5z" fill="#1F3A5F"/></marker>
+  </defs>
+<circle cx="60" cy="44" r="36" fill="url(#gp)"/><circle cx="60" cy="44" r="32" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(40.6 24.6) scale(1.620)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M17 11l2 2 4-4"/><circle cx="8.500" cy="7" r="4"/></g>
+<rect x="4" y="6" width="40" height="20" rx="10" fill="url(#gg)" stroke="#FFFFFF" stroke-width="2"/><text x="24.0" y="20" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#FFFFFF">14 +</text>
+<rect x="30" y="90" width="60" height="54" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2.500"/>
+<circle cx="46" cy="106" r="8" fill="url(#gb)"/><path d="M46 105v5M46 101.500v.100" stroke="#FFFFFF" stroke-width="2.400" stroke-linecap="round"/>
+<path d="M60 102h22M60 111h14M40 124h42M40 134h28" stroke="#C9D2DE" stroke-width="4" stroke-linecap="round"/>
+</svg>

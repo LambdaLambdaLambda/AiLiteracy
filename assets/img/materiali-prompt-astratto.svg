@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 108">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#49A874"/><stop offset="1" stop-color="#2E8B57"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E09A3A"/><stop offset="1" stop-color="#C9761A"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A7DB0"/><stop offset="1" stop-color="#2F5D8A"/></linearGradient>
+    <linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5C8A"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C72E0"/><stop offset="1" stop-color="#6F4FD1"/></linearGradient>
+    <marker id="an" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.500" markerHeight="4.500" orient="auto"><path d="M0 0l10 5-10 5z" fill="#1F3A5F"/></marker>
+  </defs>
+<circle cx="36" cy="46" r="26" fill="url(#gn)"/><circle cx="36" cy="46" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(22.0 32.0) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></g>
+<path d="M66 46h10" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" marker-end="url(#an)"/>
+<path d="M98 16h82a8 8 0 0 1 8 8v36a8 8 0 0 1-8 8h-58l-12 10v-10H98a8 8 0 0 1-8-8v-36a8 8 0 0 1 8-8z" fill="#FFFFFF" stroke="#2E8B57" stroke-width="2.500" stroke-linejoin="round"/>
+<circle cx="104" cy="32" r="3.200" fill="#2E8B57"/><circle cx="116" cy="32" r="3.200" fill="#2E8B57"/><circle cx="128" cy="32" r="3.200" fill="#2E8B57"/><path d="M100 46h78M100 56h52" stroke="#BFE0CD" stroke-width="4" stroke-linecap="round"/>
+<circle cx="186" cy="18" r="10" fill="url(#gg)" stroke="#FFFFFF" stroke-width="2"/><path d="M181.500 18.500l3.200 3.200 5.800-6.600" fill="none" stroke="#FFFFFF" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M196 46h10" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" marker-end="url(#an)"/>
+<rect x="226" y="12" width="40" height="52" rx="5" fill="#FFFFFF" stroke="#C9761A" stroke-width="2.500"/><path d="M234 25h24M234 36h18M234 47h24" stroke="#F3DDBF" stroke-width="4" stroke-linecap="round"/>
+<rect x="238" y="18" width="40" height="52" rx="5" fill="#FFFFFF" stroke="#6F4FD1" stroke-width="2.500"/><path d="M246 31h24M246 42h18M246 53h24" stroke="#D9D2F4" stroke-width="4" stroke-linecap="round"/>
+<rect x="250" y="24" width="40" height="52" rx="5" fill="#FFFFFF" stroke="#2F5D8A" stroke-width="2.500"/><path d="M258 37h24M258 48h18M258 59h24" stroke="#C9D8E8" stroke-width="4" stroke-linecap="round"/>
+<text x="36" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F3A5F">Docente</text>
+<text x="139" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F6B41">Prompt astratto</text>
+<text x="258" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F3A5F">Materiali</text>
+</svg>

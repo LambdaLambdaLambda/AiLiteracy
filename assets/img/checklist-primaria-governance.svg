@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 108">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#49A874"/><stop offset="1" stop-color="#2E8B57"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9534A"/><stop offset="1" stop-color="#A93226"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E09A3A"/><stop offset="1" stop-color="#C9761A"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A7DB0"/><stop offset="1" stop-color="#2F5D8A"/></linearGradient>
+    <linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5C8A"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C72E0"/><stop offset="1" stop-color="#6F4FD1"/></linearGradient>
+    <marker id="an" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.500" markerHeight="4.500" orient="auto"><path d="M0 0l10 5-10 5z" fill="#1F3A5F"/></marker>
+  </defs>
+<circle cx="50" cy="46" r="26" fill="url(#gn)"/><circle cx="50" cy="46" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(36 32) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></g>
+<circle cx="71" cy="25" r="10" fill="url(#gg)" stroke="#FFFFFF" stroke-width="2"/><path d="M66.5 25.5l3.200 3.200 5.800-6.600" fill="none" stroke="#FFFFFF" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="50" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F3A5F">PTOF</text>
+<circle cx="150" cy="46" r="26" fill="url(#gb)"/><circle cx="150" cy="46" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(136 32) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></g>
+<circle cx="171" cy="25" r="10" fill="url(#gg)" stroke="#FFFFFF" stroke-width="2"/><path d="M166.5 25.5l3.200 3.200 5.800-6.600" fill="none" stroke="#FFFFFF" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F3A5F">DPIA + FRIA</text>
+<circle cx="250" cy="46" r="26" fill="url(#gp)"/><circle cx="250" cy="46" r="22" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(236 32) scale(1.170)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M23 21v-2a4 4 0 0 0-3-3.870"/><path d="M16 3.130a4 4 0 0 1 0 7.750"/><circle cx="9" cy="7" r="4"/></g>
+<circle cx="271" cy="25" r="10" fill="url(#gg)" stroke="#FFFFFF" stroke-width="2"/><path d="M266.5 25.5l3.200 3.200 5.800-6.600" fill="none" stroke="#FFFFFF" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="250" y="96" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#1F3A5F">Consenso</text>
+<path d="M84 46h32M184 46h32" stroke="#C9D2DE" stroke-width="3" stroke-dasharray="3 5" stroke-linecap="round"/>
+</svg>

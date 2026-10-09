@@ -465,6 +465,11 @@ button.tag { border: 0; cursor: pointer; font-family: inherit; align-self: cente
 .sheet .row .art { margin-top: 0; }
 .cards.sm .card:has(.sheet) .ico { width: calc(18 * var(--pt)); height: calc(18 * var(--pt)); font-size: calc(11 * var(--pt)); }
 
+/* Check-list: voci da spuntare dentro una card */
+.rows.check .row { align-items: flex-start; gap: calc(6 * var(--pt)); padding: calc(4 * var(--pt)) 0; }
+.rows.check .row .ico { width: calc(16 * var(--pt)); height: calc(16 * var(--pt)); border: 0; background: color-mix(in srgb, var(--c) 14%, white); }
+.rows.check .row b { font-size: calc(9 * var(--pt)); }
+
 /* Utilità */
 .grow { flex: 1; min-height: 0; }
 
