@@ -1,0 +1,45 @@
+Crea una pagina "slide-42.html" per illustrare sinteticamente i seguenti tre contenuti (numerati da 1 a 3).
+ relative all'analisi del Caso-Studio: "Compiti a Casa con l'Intelligenza Artificiale".
+ Utilizza sempre lo stile grafico uniforme alla presentazione.
+  
+ Crea anche delle infografiche accattivanti ed evocative da inserire come immagini per ciascuna delle altre pagine.
+
+L'assegnazione di compiti a casa che prevedano l'impiego di strumenti di Intelligenza Artificiale (IA) rappresenta una delle attività didattiche a maggior impatto educativo e gestionale per un'Istituzione Scolastica. Il lavoro domestico si svolge infatti al di fuori dell'ambiente protetto della rete scolastica e richiede un quadro rigoroso di garanzie a tutela della riservatezza dei minori, unitamente a un impianto pedagogico orientato allo sviluppo del pensiero critico contro i rischi di "allucinazione" e passività cognitiva.
+
+Di seguito si analizza come affrontare tale caso-studio in conformità al **D.M. 9 agosto 2025, n. 166** (*Linee guida per l'introduzione dell'Intelligenza Artificiale nelle scuole*), alla **Legge 23 settembre 2025, n. 132** (*Legge delega IA*), al **GDPR (Regolamento UE 2016/679)** e al **Regolamento europeo sull'IA (AI Act, Regolamento UE 2024/1689)**.
+
+---
+
+### **1\. Inquadramento nel Piano di Adozione dell'Istituto (PTOF e Governance)**
+
+Un docente non può assegnare in modo autonomo o estemporaneo attività domestiche basate sull'IA senza che l'assegnazione sia contemplata all'interno della cornice strategica dell'istituto:
+
+* **Pianificazione e PTOF (D.M. 166/2025, capitolo 4.1):** L'utilizzo dell'IA per lo studio e i compiti a casa deve rientrare nella **Fase 1 (Definizione)** e nella **Fase 2 (Pianificazione)** del piano d'adozione dell'IA. L'attività deve rispondere alle direttive dell'Atto di Indirizzo del Dirigente Scolastico *(Legge 13 luglio 2015, n. 107, art. 1, comma 14)* ed essere deliberata dal Collegio dei Docenti e approvata dal Consiglio d'Istituto all'interno del **Piano Triennale dell'Offerta Formativa (PTOF)** *(D.M. 166/2025, par. 2)*.
+* **Valutazione d'Impatto DPIA e FRIA (D.M. 166/2025, par. 3.3):** In qualità di *deployer* *(Regolamento UE 2024/1689 - AI Act, art. 3, par. 1, n. 4)*, la scuola deve aver condotto preventivamente la Valutazione d'Impatto sulla Protezione dei Dati (**DPIA** *ex art. 35 GDPR*), integrata con la Valutazione d'Impatto sui Diritti Fondamentali (**FRIA** *ex art. 27 AI Act*) mediante la metodologia *HUDERIA* del Consiglio d'Europa *(D.M. 166/2025, par. 3.3, lett. b)*. La DPIA/FRIA deve considerare esplicitamente i rischi legati al trattamento domestico di dati di soggetti vulnerabili (minori).
+* **Informativa e Consenso Genitoriale (Legge 132/2025, art. 4):** Per l'accesso a piattaforme d'IA e per il relativo trattamento dei dati da parte di **minori di 14 anni**, la legge impone l'obbligo del consenso espresso prestato da chi esercita la responsabilità genitoriale *(Legge 23 settembre 2025, n. 132, art. 4, comma 4; GDPR Regolamento UE 2016/679, art. 8; D.Lgs. 196/2003 novellato dal D.Lgs. 101/2018, art. 2-quinquies)*.
+* **Gestione del Diritto di Non Partecipazione / Opt-Out (D.M. 166/2025, par. 3.2):** Le famiglie devono essere informate della possibilità di esercitare l'opt-out per l'utilizzo dei dati nell'addestramento dei modelli. La scuola garantisce che l'esercizio dell'opt-out *"non comporti alcuna limitazione nell'accesso alle tecnologie didattiche stesse o agli strumenti di apprendimento basati sull'IA"* né produca penalizzazioni nelle valutazioni o nello svolgimento del compito *(D.M. 166/2025, par. 3.2)*.
+
+---
+
+### **2\. Gestione dei Dati Personali nei Prompt durante i Compiti a Casa**
+
+Durante lo svolgimento dei compiti a casa, la principale criticità riguarda il rischio che gli studenti inseriscano nei sistemi di IA generativa (*LLM*) informazioni personali riservate o riconducibili alla propria sfera privata o familiare:
+
+1. **Minimizzazione e De-identificazione dei Prompt (GDPR, art. 5 e D.M. 166/2025, par. 3.2):** In ossequio al principio di minimizzazione dei dati *(GDPR, art. 5, par. 1, lett. c)*, le Linee guida MIM stabiliscono che *"L'inserimento di prompt deve avvenire preferibilmente senza trattamento di dati personali identificativi o riconducibili ad account individuali, in quanto può comportare rischi non compatibili con i principi di minimizzazione e limitazione della finalità"* *(D.M. 166/2025, par. 3.2)*.
+2. **Istruzioni Operative agli Studenti:** Il docente deve fornire agli alunni regole tassative sui prompt per i compiti a casa:
+  * *Divieto assoluto* di inserire nome, cognome, scuola di appartenenza, indirizzo, nomi di compagni o docenti, e dati sensibili/particolari *(GDPR, art. 9)*.
+  * *Obbligo di formulazione astratta:* Formulare le richieste in terza persona o tramite ruoli ipotetici (es. *"Agisci come un tutor scolastico di geografia e forniscimi uno schema concettuale sui fiumi italiani..."* anziché *"Sono Marco della 2B e mi serve la mappa per domani..."*).
+3. **Ambienti Protetti d'Istituto e Zero Data Retention (D.M. 166/2025, par. 3.1):** Per i compiti a casa, la scuola privilegia l'assegnazione tramite **account o stanze** **educational** **d'istituto protette**, collegate a contratti ex art. 28 GDPR stipulati con i fornitori, i quali garantiscono la disattivazione della profilazione, la cancellazione dei prompt alla chiusura della sessione (*Zero Data Retention*) e il divieto contrattuale di riutilizzare i testi prodotti dagli studenti per l'addestramento di modelli di IA commerciali *(D.M. 166/2025, par. 3.1 e 3.2)*.
+
+---
+
+### **3\. Sviluppo del Pensiero Critico e Contrasto alle "Allucinazioni"**
+
+I modelli di IA generativa producono risposte linguisticamente fluide ma soggette a **"allucinazioni"** (generazione di informazioni, dati o citazioni bibliografiche del tutto inventate o inesatte).
+
+Come richiamato dal **Considerando 56 del Regolamento (UE) 2024/1689 (AI Act)** e dal **paragrafo 4.4 delle Linee guida MIM**, l'introduzione dell'IA nella didattica mira a sviluppare l'alfabetizzazione mediatica e il pensiero critico, evitando che il compito a casa si riduca al mero "copia-incolla" passivo dell'output algoritmico.
+
+* **Inversione della Consegna Didattica (** **Debunking** **e** **Fact-Checking** **):** Il compito a casa non deve richiedere la semplice redazione di un testo, ma l'analisi critica della risposta dell'IA.
+  * *Esempio di consegna:* "Chiedi al chatbot di generare un riassunto sul periodo storico X; individua nella risposta almeno due inesattezze, 'allucinazioni' o omissioni confrontando il testo con il manuale scolastico o con fonti verificate, e riscrivi la versione corretta integrando le citazioni".
+* **Valutazione delle Fonti (DigComp 2.2, Competenza 1.2):** Lo studente applica la competenza 1.2 del Quadro europeo DigComp 2.2 (*"Valutare dati, informazioni e contenuti digitali"*), imparando a mettere in discussione la neutralità della risposta e a rilevare eventuali *bias* o distorsioni culturali/ideologiche dell'algoritmo *(AI Act, Considerando 67 e 132)*.
+* **Trasparenza e Principio** **Human-in-the-Loop** **(AI Act, art. 14):** Nello svolgimento del compito a casa, lo studente deve includere una brevissima *"Dichiarazione di Trasparenza"*, indicando quali prompt ha utilizzato, quali risposte ha ottenuto dall'IA e in che modo è intervenuto personalmente per correggere, validare o rielaborare il testo generato dalla macchina *(D.M. 166/2025, par. 3.3, lett. a; AI Act, art. 14 e art. 86)*.

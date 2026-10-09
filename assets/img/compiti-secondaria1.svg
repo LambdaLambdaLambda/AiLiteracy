@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#49A874"/><stop offset="1" stop-color="#2E8B57"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E09A3A"/><stop offset="1" stop-color="#C9761A"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A7DB0"/><stop offset="1" stop-color="#2F5D8A"/></linearGradient>
+    <linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5C8A"/><stop offset="1" stop-color="#1F3A5F"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C72E0"/><stop offset="1" stop-color="#6F4FD1"/></linearGradient>
+  </defs>
+<rect x="12" y="24" width="204" height="130" rx="14" fill="#FFFFFF" stroke="#2F5D8A" stroke-width="2.500"/>
+<circle cx="114" cy="24" r="15" fill="url(#gb)"/><circle cx="114" cy="24" r="11" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(105.9 15.9) scale(0.675)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
+<circle cx="46" cy="110" r="22" fill="url(#gn)"/><circle cx="46" cy="110" r="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(34.1 98.1) scale(0.990)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></g>
+<rect x="78" y="108" width="36" height="24" rx="4" fill="url(#go)"/><text x="96" y="124" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="13" fill="#FFFFFF">1</text>
+<rect x="116" y="86" width="36" height="46" rx="4" fill="url(#gg)"/><text x="134" y="102" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="13" fill="#FFFFFF">2</text>
+<rect x="154" y="64" width="36" height="68" rx="4" fill="url(#gp)"/><text x="172" y="80" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="13" fill="#FFFFFF">3</text>
+<path d="M72 96l40-22 38-22" fill="none" stroke="#1F3A5F" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round"/>
+<path d="M172 64V42" stroke="#1F3A5F" stroke-width="2.500" stroke-linecap="round"/><path d="M172 42l16 5-16 6z" fill="#2E8B57" stroke="#2E8B57" stroke-width="1.500" stroke-linejoin="round"/>
+<text x="114" y="147" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="10" fill="#1F3A5F">Percorso guidato, a gradini</text>
+<path d="M234 56h48a7 7 0 0 1 7 7v24a7 7 0 0 1-7 7h-30l-10 9v-9h-8a7 7 0 0 1-7-7v-24a7 7 0 0 1 7-7z" fill="#FFFFFF" stroke="#2E8B57" stroke-width="2.500" stroke-linejoin="round"/>
+<circle cx="240" cy="68" r="2.500" fill="#2E8B57"/><circle cx="249" cy="68" r="2.500" fill="#2E8B57"/><circle cx="258" cy="68" r="2.500" fill="#2E8B57"/><path d="M238 80h38" stroke="#BFE0CD" stroke-width="4" stroke-linecap="round"/>
+<circle cx="287" cy="57" r="9" fill="url(#gg)" stroke="#FFFFFF" stroke-width="2"/><path d="M283 57.500l2.800 2.800 5-5.800" fill="none" stroke="#FFFFFF" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="258" y="122" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="10" fill="#1F6B41">Prompt</text>
+<text x="258" y="134" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="10" fill="#1F6B41">anonimi</text>
+<path d="M30 168h240" stroke="#D5DCE5" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round"/>
+<circle cx="54" cy="198" r="20" fill="url(#go)"/><circle cx="54" cy="198" r="16" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(43.2 187.2) scale(0.900)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.500 3.500a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.500 3.500z"/></g>
+<circle cx="150" cy="198" r="20" fill="url(#gg)"/><circle cx="150" cy="198" r="16" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(139.2 187.2) scale(0.900)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.080V12a10 10 0 1 1-5.930-9.140"/><path d="M22 4L12 14.010l-3-3"/></g>
+<circle cx="246" cy="198" r="20" fill="url(#gp)"/><circle cx="246" cy="198" r="16" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity=".7"/>
+<g transform="translate(235.2 187.2) scale(0.900)" fill="none" stroke="#FFFFFF" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.350-4.350"/></g>
+<text x="54" y="234" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="10" fill="#1F3A5F">Verifica bozze</text>
+<text x="150" y="234" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="10" fill="#1F3A5F">Autocorrezione</text>
+<text x="246" y="234" text-anchor="middle" font-family="Lato, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="10" fill="#1F3A5F">Fact-checking</text>
+</svg>

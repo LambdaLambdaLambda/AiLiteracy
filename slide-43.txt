@@ -1,0 +1,12 @@
+Crea una pagina "slide-43.html" per illustrare sinteticamente i seguenti contenuti
+ relativi all'assegnazione dei compiti a casa con l'IA si adatta all'età, alla maturità cognitiva e al profilo giuridico degli studenti.
+ 
+Utilizza sempre lo stile grafico uniforme alla presentazione.
+Crea anche delle infografiche accattivanti ed evocative da inserire come immagini per ciascuna delle altre pagine.
+
+#### **A. Scuola Primaria (Fascia 6–11 anni / Minori di 14 anni)**
+
+* **Inquadramento Normativo:** Richiede l'obbligo del consenso genitoriale espresso per qualsiasi strumento d'IA *(Legge 23 settembre 2025, n. 132, art. 4, comma 4)*.
+* **Configurazione Didattica:** **Nessuna assegnazione autonoma di compiti a casa su chatbot aperti o commerciali.**
+* **Modalità Operativa:** I compiti a casa con l'IA si configurano esclusivamente come **esplorazioni guidate da svolgere in famiglia** su piattaforme protette d'istituto (es. attività *unplugged*, fruizione di risorse visive o simulatori interattivi con prompt pre-impostati dal docente).
+* **Obiettivo:** Far comprendere all'alunno che la macchina è un assistente che può commettere errori e richiede sempre la presenza dell'uomo.

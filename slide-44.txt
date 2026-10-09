@@ -1,0 +1,11 @@
+Crea una pagina "slide-44.html" per illustrare sinteticamente i seguenti contenuti relativi all'assegnazione dei compiti a casa con l'IA.
+ 
+Utilizza sempre lo stile grafico uniforme alla presentazione.
+Crea anche delle infografiche accattivanti ed evocative da inserire come immagini per ciascuna delle altre pagine.
+
+#### **Scuola Secondaria di Primo Grado (Fascia 11–14 anni / Minori di 14 anni)**
+
+* **Inquadramento Normativo:** Consenso genitoriale obbligatorio per l'uso dell'IA *(Legge 23 settembre 2025, n. 132, art. 4, comma 4; D.Lgs. 196/2003, art. 2-quinquies)*.
+* **Configurazione Didattica:** Compiti a casa fortemente strutturati con percorsi di supporto (*scaffolding*).
+* **Modalità Operativa:** Utilizzo di ambienti protetti scolastici con **prompt preconfezionati e de-identificati**. L'alunno utilizza l'IA per la verifica delle proprie bozze, per l'autocorrezione grammaticale o per il *fact-checking* di brevi risposte.
+* **Obiettivo:** Addestrare gli studenti alla de-identificazione dei dati nei prompt, alla protezione della privacy online e al riconoscimento iniziale delle allucinazioni algoritmiche.
