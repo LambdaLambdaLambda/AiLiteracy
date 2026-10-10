@@ -1,0 +1,13 @@
+Crea una pagina "slide-58.html" per illustrare sinteticamente i seguenti contenuti relativi a Max Schrems, le sentenze Schrems I e II, il Privacy Shield, il CLOUD Act e la TIA
+
+Utilizza sempre lo stile grafico uniforme alla presentazione.
+Crea anche delle infografiche accattivanti ed evocative da inserire come immagini per ciascuna delle altre pagine.
+
+**Max Schrems** è un avvocato e attivista per la privacy austriaco (fondatore dell'organizzazione non-profit **NOYB**) la cui storia e le cui azioni giudiarie hanno ridefinito la protezione dei dati personali nell'Unione Europea, provocando l'invalidazione di due storici accordi transatlantici sul trasferimento dei dati ed elaborando nuove garanzie sul controllo delle tecnologie cloud esterne.
+
+**Key themes I noticed:**
+
+1. **La storia di Max Schrems e la nascita di NOYB**: La sua battaglia giuridica è iniziata nel 2011 durante uno studio universitario nella Silicon Valley, quando richiese a Facebook tutti i dati archiviati sul suo conto e ricevette un CD-ROM di oltre 1.200 pagine (comprese chat e informazioni eliminate), spingendolo ad avviare un contenzioso sistematico che ha portato nel 2017 alla creazione della ONG **NOYB – European Center for Digital Rights**.
+2. **La Sentenza "Schrems I" (2015) e il crollo del Safe Harbor**: A seguito delle rivelazioni di Edward Snowden nel 2013 sui programmi di sorveglianza di massa dell'NSA (PRISM), la Corte di Giustizia dell'Unione Europea (Causa C-362/14) ha dichiarato **invalido il Safe Harbor** (l'accordo UE-USA del 2000), poiché le leggi di sorveglianza statunitensi prevalevano indiscriminatamente sui diritti fondamentali europei senza tutele giurisdizionali effettive.
+3. **La Sentenza "Schrems II" (2020) e l'introduzione della TIA**: Con la Causa C-311/18, la Corte di Giustizia dell'UE ha **annullato anche l'EU-US Privacy Shield** (il secondo accordo siglato nel 2016) per le medesime ragioni legate alle interferenze della sorveglianza USA. La sentenza ha salvato le Clausole Contrattuali Tipo (SCC), stabilendo tuttavia che Esse non bastano da sole e imponendo agli esportatori UE di condurre una **Transfer Impact Assessment (TIA)** per verificare il livello di protezione effettivo e adottare eventuali misure supplementari.
+4. **Il CLOUD Act statunitense e il conflitto col GDPR**: Approvato negli USA nel 2018, il **CLOUD Act** autorizza le autorità inquirenti americane a richiedere l'accesso ai dati gestiti da provider tecnologici soggetti alla giurisdizione USA indipendentemente da dove si trovino fisicamente i server (anche nell'UE), creando una diretta tensione con l'**Articolo 48 del GDPR** e rendendo centrale la TIA nella gestione delle piattaforme cloud e d'IA.
