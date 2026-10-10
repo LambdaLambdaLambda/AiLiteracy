@@ -1,0 +1,220 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation "Accesso rapido":
+      - list:
+        - listitem:
+          - link "Salta al contenuto" [ref=e5] [cursor=pointer]:
+            - /url: "#main-content"
+        - listitem:
+          - link "Naviga la sezione" [ref=e6] [cursor=pointer]:
+            - /url: "#nav-content"
+        - listitem:
+          - link "Raggiungi il piè di pagina" [ref=e7] [cursor=pointer]:
+            - /url: "#footer"
+    - generic [ref=e8]:
+      - generic [ref=e11]:
+        - link [ref=e13] [cursor=pointer]:
+          - /url: http://www.governo.it/
+          - strong [ref=e14]: Governo Italiano
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - link "Accesso" [ref=e19] [cursor=pointer]:
+              - /url: /web/guest/accesso
+      - generic [ref=e22]:
+        - generic [ref=e24]:
+          - link [ref=e26] [cursor=pointer]:
+            - /url: https://www.mim.gov.it/web/guest/
+            - img "Torna alla pagina iniziale" [ref=e27]
+          - heading "Ministero dell'Istruzione e del Merito" [level=1] [ref=e29]
+        - generic [ref=e32]:
+          - generic [ref=e34]:
+            - paragraph [aria-hidden] [ref=e35]: "Seguici su:"
+            - generic "I canali social del MIUR" [ref=e36]:
+              - link "Facebook" [ref=e37] [cursor=pointer]:
+                - /url: https://www.facebook.com/MinisteroIstruzione
+              - link "Twitter" [ref=e38] [cursor=pointer]:
+                - /url: https://twitter.com/MIsocialTW
+              - link "Youtube" [ref=e39] [cursor=pointer]:
+                - /url: https://www.youtube.com/user/MinisteroMIUR
+              - link "Flickr" [ref=e40] [cursor=pointer]:
+                - /url: https://www.flickr.com/photos/miursocial/
+              - link "Telegram" [ref=e41] [cursor=pointer]:
+                - /url: https://telegram.me/Miur_Social
+              - link "Instagram" [ref=e42] [cursor=pointer]:
+                - /url: https://www.instagram.com/ministeroistruzione/
+              - link "Slideshare" [ref=e43] [cursor=pointer]:
+                - /url: https://www2.slideshare.net/miursocial
+          - generic [ref=e47]:
+            - generic [ref=e48]: Cerca
+            - textbox "Cerca" [ref=e49]:
+              - /placeholder: Cerca nel sito
+            - button "Cerca" [disabled] [ref=e50] [cursor=pointer]
+  - main [ref=e51]:
+    - navigation [ref=e57]:
+      - list [ref=e58]:
+        - listitem [ref=e59]:
+          - link "Ministero" [ref=e60] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e61]:
+          - link "Argomenti e Servizi" [ref=e62] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e63]:
+          - link "Atti e Normativa" [ref=e64] [cursor=pointer]:
+            - /url: https://www.mim.gov.it/web/guest/normativa
+        - listitem [ref=e65]:
+          - link "Dati e Statistiche" [ref=e66] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e67]:
+          - link "Stampa e Comunicazione" [ref=e68] [cursor=pointer]:
+            - /url: https://www.mim.gov.it/web/guest/sala-stampa
+        - listitem [ref=e69]:
+          - link "URP" [ref=e70] [cursor=pointer]:
+            - /url: https://www.mim.gov.it/web/guest/urp
+    - main [ref=e71]:
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e85]:
+            - textbox "Parole chiave" [active] [ref=e86]:
+              - /placeholder: "Parole chiave "
+              - text: decreto ministeriale 66 12 aprile 2023
+            - button "Cerca" [ref=e88] [cursor=pointer]
+          - generic [ref=e92]:
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - generic [ref=e97]: "Filtra per:"
+                - button "Durata" [expanded] [ref=e99] [cursor=pointer]
+              - button "Categorie" [expanded] [ref=e103] [cursor=pointer]
+            - generic [ref=e106]:
+              - generic:
+                - generic:
+                  - generic [ref=e107]: "Ordina per :"
+                  - button "Rilevanza" [expanded] [ref=e109] [cursor=pointer]
+        - generic [ref=e112]:
+          - text: "Filtri attivi:"
+          - list
+        - generic [ref=e117]:
+          - generic [ref=e120]:
+            - heading [level=1] [ref=e122]:
+              - link "Decreto Ministeriale n. 66 del 12 aprile 2023" [ref=e123] [cursor=pointer]:
+                - /url: https://www.mim.gov.it/web/guest/-/decreto-ministeriale-n-66-del-12-aprile-2023
+            - generic [ref=e124]: DPUM 2023-05-17 66 Decreto di riparto delle risorse
+            - link "https://www.mim.gov.it/web/guest/-/decreto-ministeriale-n-66-del-12-aprile-2023" [ref=e127] [cursor=pointer]:
+              - /url: https://www.mim.gov.it/web/guest/-/decreto-ministeriale-n-66-del-12-aprile-2023
+            - generic [ref=e130]:
+              - generic [ref=e131]: "Tipo: Contenuto Web"
+              - generic [ref=e132]: "Data modifica: 17/05/2023"
+          - separator [ref=e133]
+          - generic [ref=e136]:
+            - heading [level=1] [ref=e138]:
+              - link "La storia" [ref=e139] [cursor=pointer]:
+                - /url: https://www.mim.gov.it/web/guest/la-storia
+            - generic [ref=e140]: Il Decreto ministeriale del 4 agosto 2007 realizza...Dipartimentale 12....ministeriale 66 del 29 luglio 2010....156 il 7 marzo 2013, con Decreto ministeriale 529...del 7 Febbraio 2018 e 294 del 18 Aprile 2018, il D.M
+            - link "https://www.mim.gov.it/web/guest/la-storia" [ref=e143] [cursor=pointer]:
+              - /url: https://www.mim.gov.it/web/guest/la-storia
+            - generic [ref=e146]:
+              - generic [ref=e147]: "Tipo: Contenuto Web"
+              - generic [ref=e148]: "Data modifica: 16/10/2024"
+          - separator [ref=e149]
+          - generic [ref=e152]:
+            - heading [level=1] [ref=e154]:
+              - link "Decreto di concessione della agevolazioni relativo al progetto ARS01_01002 area Chimica Verde" [ref=e155] [cursor=pointer]:
+                - /url: https://www.mim.gov.it/web/guest/-/decreto-di-concessione-della-agevolazioni-relativo-al-progetto-ars01_01002-area-chimica-verde
+            - generic [ref=e156]: "U. n. 91 del 20 aprile 2015 – Supplemento Ordinario...Direttoriale del 10 aprile 2018 n. 852 a parziale...dicembre 2017, recante: Linee guida al Decreto Ministeriale...comunque obbligatoriamente non oltre il 31 dicembre 2023...2.018.249,66 (duemilionidiciottomiladuecentoquartanoveeuro/66"
+            - link "https://www.mim.gov.it/web/guest/-/decreto-di-concessione-della-agevolazioni-relativo-al-progetto-ars01_01002-area-chimica-verde" [ref=e159] [cursor=pointer]:
+              - /url: https://www.mim.gov.it/web/guest/-/decreto-di-concessione-della-agevolazioni-relativo-al-progetto-ars01_01002-area-chimica-verde
+            - generic [ref=e162]:
+              - generic [ref=e163]: "Tipo: Contenuto Web"
+              - generic [ref=e164]: "Data modifica: 27/08/2018"
+          - separator [ref=e165]
+          - generic [ref=e168]:
+            - heading [level=1] [ref=e170]:
+              - link "Avvisi e Piani di riparto" [ref=e171] [cursor=pointer]:
+                - /url: https://www.mim.gov.it/web/guest/avvisi
+            - generic [ref=e172]: del 2018 è ulteriormente prorogato al 31 ottobre 2023...del 2018 è ulteriormente prorogato al 31 ottobre 2023...Ministeriale n. 18 del 23 maggio 2020 recante criteri...Odontotecnico _ Candidature entro le ore 12.00 del 30 aprile...2017 "Contrasto alle Fake News" DDG 26/01/2018 n.66
+            - link "https://www.mim.gov.it/web/guest/avvisi" [ref=e175] [cursor=pointer]:
+              - /url: https://www.mim.gov.it/web/guest/avvisi
+            - generic [ref=e178]:
+              - generic [ref=e179]: "Tipo: Contenuto Web"
+              - generic [ref=e180]: "Data modifica: 27/10/2021"
+          - separator [ref=e181]
+        - generic [ref=e183]:
+          - generic [ref=e184]: Pagina 1 di 1 su 4 risultati totali. La ricerca ha impiegato 0.045 secondi.
+          - link "1" [ref=e189] [cursor=pointer]:
+            - /url: "#"
+  - contentinfo [ref=e191]:
+    - generic [ref=e199]:
+      - generic [ref=e200]:
+        - generic [ref=e201]: Questo sito, per il suo funzionamento, si avvale unicamente di cookie tecnici e di cookie analitici pseudonimizzati, assimilati ai cookie tecnici, per l’installazione dei quali non è necessario il consenso dell’utente. Per saperne di più consulta l’informativa oppure prosegui nella navigazione.
+        - generic [ref=e204]:
+          - link "Informativa" [ref=e205] [cursor=pointer]:
+            - /url: /web/guest/privacy
+          - button "Prosegui" [ref=e207] [cursor=pointer]
+      - generic [ref=e209]:
+        - generic [ref=e210]: Ministero dell'Istruzione e del Merito
+        - generic [ref=e216]:
+          - heading "TRASPARENZA" [level=2] [ref=e217]
+          - list [ref=e220]:
+            - listitem [ref=e221]:
+              - link "Amministrazione trasparente" [ref=e222] [cursor=pointer]:
+                - /url: /web/guest/amministrazione-trasparente
+            - listitem [ref=e223]:
+              - link "Atti di notifica" [ref=e224] [cursor=pointer]:
+                - /url: /web/guest/atti-di-notifica
+            - listitem [ref=e225]:
+              - link "Monitoraggio accessi" [ref=e226] [cursor=pointer]:
+                - /url: /web/guest/monitoraggio-accessi
+        - generic [ref=e228]:
+          - heading "COMUNICA CON NOI" [level=2] [ref=e229]
+          - list [ref=e232]:
+            - listitem [ref=e233]:
+              - link "Posta elettronica" [ref=e234] [cursor=pointer]:
+                - /url: /web/guest/posta-elettronica
+            - listitem [ref=e235]:
+              - link "Posta elettronica certificata" [ref=e236] [cursor=pointer]:
+                - /url: /web/guest/posta-elettronica-certificata
+            - listitem [ref=e237]:
+              - link "Sedi e contatti" [ref=e238] [cursor=pointer]:
+                - /url: /web/guest/sedi-e-contatti
+      - generic [ref=e240]:
+        - link "Governo Italiano" [ref=e243] [cursor=pointer]:
+          - /url: http://www.governo.it/
+        - generic [ref=e245]:
+          - paragraph [ref=e247]: "Seguici su:"
+          - link [ref=e249] [cursor=pointer]:
+            - /url: https://www.facebook.com/MinisteroIstruzione
+            - img "facebook" [ref=e250]
+          - link [ref=e252] [cursor=pointer]:
+            - /url: https://twitter.com/MIsocialTW
+            - img "Twitter" [ref=e253]
+          - link [ref=e255] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/MinisteroMIUR
+            - img "Youtube" [ref=e256]
+          - link [ref=e258] [cursor=pointer]:
+            - /url: https://www.flickr.com/photos/miursocial/
+            - img "Flickr" [ref=e259]
+          - link [ref=e261] [cursor=pointer]:
+            - /url: https://www.instagram.com/ministeroistruzione/
+            - img "Instagram" [ref=e262]
+          - link [ref=e264] [cursor=pointer]:
+            - /url: https://telegram.me/Miur_Social
+            - img "Telegram" [ref=e265]
+          - link [ref=e267] [cursor=pointer]:
+            - /url: https://www2.slideshare.net/miursocial
+            - img "Slideshare" [ref=e268]
+      - generic [ref=e270]:
+        - paragraph [ref=e272]: Tutti i diritti riservati © 2018
+        - generic [ref=e273]: "Codice Fiscale MI: 80185250588"
+        - list [ref=e275]:
+          - listitem [ref=e276]:
+            - link "Dichiarazione di accessibilità" [ref=e277] [cursor=pointer]:
+              - /url: https://form.agid.gov.it/m_pi/portale_istituzionale_del_ministero_dell'istruzione_e_del_merito/dichiarazione
+          - listitem [ref=e278]:
+            - link "Mappa del sito" [ref=e279] [cursor=pointer]:
+              - /url: /web/guest/mappa-del-sito
+          - listitem [ref=e280]:
+            - link "Note legali" [ref=e281] [cursor=pointer]:
+              - /url: /web/guest/note-legali
+          - listitem [ref=e282]:
+            - link "Privacy" [ref=e283] [cursor=pointer]:
+              - /url: /web/guest/privacy
+      - paragraph [ref=e285]

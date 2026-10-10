@@ -1,0 +1,202 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - button "Skip to content" [ref=e3] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - link [ref=e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=e11]
+      - search [ref=e12]:
+        - button "Search" [ref=e15] [cursor=pointer]
+        - searchbox "Enter your search here – Search suggestions will show as you type" [ref=e16]: site:gazzettaufficiale.it "Decreto-Legge 31 ottobre 2025, n. 159"
+        - button "Search using an image" [ref=e19] [cursor=pointer]
+    - complementary "Account Rewards and Preferences" [ref=e21]:
+      - button "Microsoft Rewards" [ref=e22] [cursor=pointer]
+      - link "Sign in" [ref=e23] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - navigation "Search Filter" [ref=e25]:
+      - list [ref=e26]:
+        - listitem [ref=e27]:
+          - link "All" [ref=e28] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=e29]:
+          - link "Search" [ref=e30] [cursor=pointer]:
+            - /url: /copilotsearch?q=site%3agazzettaufficiale.it+%22Decreto-Legge+31+ottobre+2025%2c+n.+159%22&FORM=CSSCOP
+        - listitem [ref=e33]:
+          - link "Images" [ref=e34] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=5053a449437034923a9e9064094f08cc220516c12acfca7733b86bdc63dd3a7fJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1L2ltYWdlcy9zZWFyY2g_cT1zaXRlJTNhZ2F6emV0dGF1ZmZpY2lhbGUuaXQrJTIyRGVjcmV0by1MZWdnZSszMStvdHRvYnJlKzIwMjUlMmMrbi4rMTU5JTIyJkZPUk09SERSU0My&ntb=1
+        - listitem [ref=e35]:
+          - link "Videos" [ref=e36] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=fe12307937f67fc7e7789282c9fafe1274fad82cd84c6c97efb195a7fbc48206JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1zaXRlJTNhZ2F6emV0dGF1ZmZpY2lhbGUuaXQrJTIyRGVjcmV0by1MZWdnZSszMStvdHRvYnJlKzIwMjUlMmMrbi4rMTU5JTIyJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=e37]:
+          - link "Maps" [ref=e38] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e0d93b9c39c7a050a3018c2189b5e735e71bf3fac1c6546609f9e34a390506c8JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1L21hcHM_cT1zaXRlJTNhZ2F6emV0dGF1ZmZpY2lhbGUuaXQrJTIyRGVjcmV0by1MZWdnZSszMStvdHRvYnJlKzIwMjUlMmMrbi4rMTU5JTIyJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=e39]:
+          - link "News" [ref=e40] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=dbfacdb729fcb84eb69c56ed95928cf6a806e3fbdfb128eba076cb3dc47e0b18JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1L25ld3Mvc2VhcmNoP3E9c2l0ZSUzYWdhenpldHRhdWZmaWNpYWxlLml0KyUyMkRlY3JldG8tTGVnZ2UrMzErb3R0b2JyZSsyMDI1JTJjK24uKzE1OSUyMiZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=e41]:
+          - button [ref=e42] [cursor=pointer]
+  - generic [ref=e46]:
+    - main "Search Results" [ref=e47]:
+      - generic [ref=e48]: About 85,100 results
+      - list [ref=e50]:
+        - listitem [ref=e51]:
+          - link "wikipedia.org" [ref=e53] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ca28b36ec5aff19e22366b184f5c79475eda59e473f3d12f0c9c3e890dcd51d7JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly9pdC53aWtpcGVkaWEub3JnL3dpa2kvRGVjcmV0bw&ntb=1
+            - img "Global web icon" [ref=e56]
+            - generic [ref=e57]:
+              - generic [ref=e58]: wikipedia.org
+              - generic [ref=e59]: https://it.wikipedia.org › wiki › Decreto
+          - heading [level=2] [ref=e62]:
+            - link [ref=e63] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=ca28b36ec5aff19e22366b184f5c79475eda59e473f3d12f0c9c3e890dcd51d7JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly9pdC53aWtpcGVkaWEub3JnL3dpa2kvRGVjcmV0bw&ntb=1
+              - strong [ref=e64]: Decreto
+              - text: "- Wikipedia"
+          - paragraph [ref=e66]: Un decreto (dal latino decretum, participio passato di decerno, 'deliberare', 'decidere', a sua volta derivato dalla preposizione de, 'da', …
+        - listitem [ref=e67]:
+          - link "parlamento.it" [ref=e69] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=685147ab8235496b11dd65ff365d45c02c284512cc90ec6a42b2b71c56caaf8eJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cucGFybGFtZW50by5pdC9sZWcvbGRsX25ldy92My9zbGRsZWxlbmNvZGxjb252ZXJzLmh0bQ&ntb=1
+            - img "Global web icon" [ref=e72]
+            - generic [ref=e73]:
+              - generic [ref=e74]: parlamento.it
+              - generic [ref=e75]: https://www.parlamento.it › leg › ldl_new › sldlelencodlconvers.htm
+          - heading [level=2] [ref=e78]:
+            - link "Ultimi Decreti-Legge esaminati - parlamento.it" [ref=e79] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=685147ab8235496b11dd65ff365d45c02c284512cc90ec6a42b2b71c56caaf8eJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cucGFybGFtZW50by5pdC9sZWcvbGRsX25ldy92My9zbGRsZWxlbmNvZGxjb252ZXJzLmh0bQ&ntb=1
+          - paragraph [ref=e81]: 2 days ago · Ultimi Decreti-Legge esaminati Decreti-Legge in corso di conversione Decreto Legge 29 settembre 2026, n. 168 "Misure …
+        - listitem [ref=e82]:
+          - link "gazzettaufficiale.it" [ref=e84] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9a0a90c027453afa1d86a5b5bcab82c6e452cc4b91d359990dca641ff92264cbJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cuZ2F6emV0dGF1ZmZpY2lhbGUuaXQv&ntb=1
+            - img "Global web icon" [ref=e87]
+            - generic [ref=e88]:
+              - generic [ref=e89]: gazzettaufficiale.it
+              - generic [ref=e90]: https://www.gazzettaufficiale.it
+          - heading [level=2] [ref=e93]:
+            - link "Gazzetta Ufficiale" [ref=e94] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=9a0a90c027453afa1d86a5b5bcab82c6e452cc4b91d359990dca641ff92264cbJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cuZ2F6emV0dGF1ZmZpY2lhbGUuaXQv&ntb=1
+          - paragraph [ref=e96]: L'archivio della Gazzetta Ufficiale, fonte ufficiale di conoscenza delle norme in vigore in Italia e strumento di diffusione, informazione …
+        - listitem [ref=e97]:
+          - link "sky.it" [ref=e99] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6ee1b09f8eed467bd69ab55be8252261bc652b2db8496d6e5c54dd5bfc410545JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly90ZzI0LnNreS5pdC9lY29ub21pYS8yMDI2LzA5LzI5L2RlY3JldG8tcGEtMjAyNi1hc3N1bnppb25pLWZlcmllLW5vdml0YQ&ntb=1
+            - img "Global web icon" [ref=e102]
+            - generic [ref=e103]:
+              - generic [ref=e104]: sky.it
+              - generic [ref=e105]: https://tg24.sky.it › economia
+          - heading [level=2] [ref=e108]:
+            - link [ref=e109] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=6ee1b09f8eed467bd69ab55be8252261bc652b2db8496d6e5c54dd5bfc410545JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly90ZzI0LnNreS5pdC9lY29ub21pYS8yMDI2LzA5LzI5L2RlY3JldG8tcGEtMjAyNi1hc3N1bnppb25pLWZlcmllLW5vdml0YQ&ntb=1
+              - strong [ref=e110]: Decreto
+              - text: "PA 2026, dalle assunzioni alle ferie: novità e cosa cambia ..."
+          - paragraph [ref=e112]: "2 days ago · Introduzione Il decreto Pa, approvato dalla Camera con 133 voti favorevoli e 66 contrari, è di fatto un decreto omnibus: …"
+        - listitem [ref=e113]:
+          - link "italiaoggi.it" [ref=e115] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4816585bf43f2c1bd441961237b06bf6b7c40006e62a5a0d934c2d79c14c044cJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cuaXRhbGlhb2dnaS5pdC9lbnRpLWxvY2FsaS1lLXBhL2RlY3JldG8tcGEtdmlhLWxpYmVyYS1kZWZpbml0aXZvLWRlbC1zZW5hdG8taWwtdGVzdG8tZS1sZWdnZS1jNjR0dzM3dg&ntb=1
+            - img "Global web icon" [ref=e118]
+            - generic [ref=e119]:
+              - generic [ref=e120]: italiaoggi.it
+              - generic [ref=e121]: https://www.italiaoggi.it › enti-locali-e-pa › decreto-pa-via-libera...
+          - heading [level=2] [ref=e124]:
+            - 'link "Decreto Pa, via libera definitivo del Senato: il testo è legge"':
+              - /url: https://www.bing.com/ck/a?!&&p=4816585bf43f2c1bd441961237b06bf6b7c40006e62a5a0d934c2d79c14c044cJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cuaXRhbGlhb2dnaS5pdC9lbnRpLWxvY2FsaS1lLXBhL2RlY3JldG8tcGEtdmlhLWxpYmVyYS1kZWZpbml0aXZvLWRlbC1zZW5hdG8taWwtdGVzdG8tZS1sZWdnZS1jNjR0dzM3dg&ntb=1
+              - strong [ref=e125] [cursor=pointer]: Decreto
+              - text: "Pa, via libera definitivo del Senato: il testo è legge"
+          - paragraph [ref=e127]: 17 hours ago · Il decreto Pa è legge a tutti gli effetti. Il Senato ha confermato la fiducia al Governo con 95 voti favorevoli, 53 contrari e …
+        - listitem [ref=e128]:
+          - link "treccani.it" [ref=e130] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e53970774906439f1811fc1556d09e1287c0755530f47a2108ecd8ff33713118JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cudHJlY2NhbmkuaXQvdm9jYWJvbGFyaW8vZGVjcmV0by8&ntb=1
+            - img "Global web icon" [ref=e133]
+            - generic [ref=e134]:
+              - generic [ref=e135]: treccani.it
+              - generic [ref=e136]: https://www.treccani.it › vocabolario › decreto
+          - heading [level=2] [ref=e139]:
+            - link "Decréto - Significato ed etimologia - Vocabolario - Treccani":
+              - /url: https://www.bing.com/ck/a?!&&p=e53970774906439f1811fc1556d09e1287c0755530f47a2108ecd8ff33713118JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cudHJlY2NhbmkuaXQvdm9jYWJvbGFyaW8vZGVjcmV0by8&ntb=1
+              - strong [ref=e140] [cursor=pointer]: Decréto
+              - text: "- Significato ed etimologia - Vocabolario - Treccani"
+          - paragraph [ref=e142]: Scopri il significato della parola decréto. Nel Vocabolario Treccani troverai significato ed etimologia del termine che cerchi. Entra …
+        - listitem [ref=e143]:
+          - link "treccani.it" [ref=e145] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7d5e95cbfb29a96295b661029fd43ba0a03280bf8a07c4db88fe4d7ffd632d60JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cudHJlY2NhbmkuaXQvZW5jaWNsb3BlZGlhL2RlY3JldG8v&ntb=1
+            - img "Global web icon" [ref=e148]
+            - generic [ref=e149]:
+              - generic [ref=e150]: treccani.it
+              - generic [ref=e151]: https://www.treccani.it › enciclopedia › decreto
+          - heading [level=2] [ref=e154]:
+            - link "Decreto - Enciclopedia - Treccani":
+              - /url: https://www.bing.com/ck/a?!&&p=7d5e95cbfb29a96295b661029fd43ba0a03280bf8a07c4db88fe4d7ffd632d60JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cudHJlY2NhbmkuaXQvZW5jaWNsb3BlZGlhL2RlY3JldG8v&ntb=1
+              - strong [ref=e155] [cursor=pointer]: Decreto
+              - text: "- Enciclopedia - Treccani"
+          - paragraph [ref=e157]: Nell'Enciclopedia Treccani troverai tutto quello che devi sapere su decreto. Entra subito su Treccani.it, il portale del sapere.
+        - listitem [ref=e158]:
+          - link "normattiva.it" [ref=e160] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ed49d0bdbbb19019f74eae2261d77a5a78e7155c908a5fc8181e7bcb92919298JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cubm9ybWF0dGl2YS5pdC91cmktcmVzL04yTHM_dXJuOm5pcjpzdGF0bzpkZWNyZXRvLmxlZ2dlOjIwMjU7OTU&ntb=1
+            - img "Global web icon" [ref=e163]
+            - generic [ref=e164]:
+              - generic [ref=e165]: normattiva.it
+              - generic [ref=e166]: https://www.normattiva.it › uri-res
+          - heading [level=2] [ref=e169]:
+            - link "DECRETO-LEGGE 30 giugno 2025, n. 95 - Normattiva":
+              - /url: https://www.bing.com/ck/a?!&&p=ed49d0bdbbb19019f74eae2261d77a5a78e7155c908a5fc8181e7bcb92919298JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cubm9ybWF0dGl2YS5pdC91cmktcmVzL04yTHM_dXJuOm5pcjpzdGF0bzpkZWNyZXRvLmxlZ2dlOjIwMjU7OTU&ntb=1
+              - strong [ref=e170] [cursor=pointer]: DECRETO
+              - text: "-LEGGE 30 giugno 2025, n. 95 - Normattiva"
+          - paragraph [ref=e172]: 3 Jul 2026 · DECRETO-LEGGE 30 giugno 2025, n. 95 Disposizioni urgenti per il finanziamento di attività economiche e imprese, …
+        - listitem [ref=e173]:
+          - link "la7.it" [ref=e175] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=048ae090303dea3abe279a952d9deefcae3714d358caf54492707abc4de4d147JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly90Zy5sYTcuaXQvcG9saXRpY2EvZGVjcmV0by1zY3VvbGEtbWF0dGFyZWxsYS10ZXR0by1zdHJhbmllcmktMzAtMDktMjAyNi0yNjM0NzQ&ntb=1
+            - img "Global web icon" [ref=e178]
+            - generic [ref=e179]:
+              - generic [ref=e180]: la7.it
+              - generic [ref=e181]: https://tg.la7.it › politica
+          - heading [level=2] [ref=e184]:
+            - 'link "Scuola: Mattarella emana decreto e autorizza presentazione alle …"':
+              - /url: https://www.bing.com/ck/a?!&&p=048ae090303dea3abe279a952d9deefcae3714d358caf54492707abc4de4d147JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly90Zy5sYTcuaXQvcG9saXRpY2EvZGVjcmV0by1zY3VvbGEtbWF0dGFyZWxsYS10ZXR0by1zdHJhbmllcmktMzAtMDktMjAyNi0yNjM0NzQ&ntb=1
+              - text: "Scuola: Mattarella emana"
+              - strong [ref=e185] [cursor=pointer]: decreto
+              - text: e autorizza presentazione alle …
+          - paragraph [ref=e187]: 14 hours ago · Il decreto contiene infine altre disposizioni sulla scuola, tra cui nuovi stanziamenti per il contrasto alla dispersione …
+        - listitem [ref=e188]:
+          - link "normattiva.it" [ref=e190] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c70dd1c46ad5abe761f3dd201968f566998d2852ce271eb5a970d72e51467a02JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cubm9ybWF0dGl2YS5pdC91cmktcmVzL04yTHM_dXJuOm5pcjpzdGF0bzpkZWNyZXRvLmxlZ2lzbGF0aXZvOjIwMjY7MTQ4&ntb=1
+            - img "Global web icon" [ref=e193]
+            - generic [ref=e194]:
+              - generic [ref=e195]: normattiva.it
+              - generic [ref=e196]: https://www.normattiva.it › uri-res
+          - heading [level=2] [ref=e199]:
+            - link "DECRETO LEGISLATIVO 7 agosto 2026, n. 148 - Normattiva":
+              - /url: https://www.bing.com/ck/a?!&&p=c70dd1c46ad5abe761f3dd201968f566998d2852ce271eb5a970d72e51467a02JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cHM6Ly93d3cubm9ybWF0dGl2YS5pdC91cmktcmVzL04yTHM_dXJuOm5pcjpzdGF0bzpkZWNyZXRvLmxlZ2lzbGF0aXZvOjIwMjY7MTQ4&ntb=1
+              - strong [ref=e200] [cursor=pointer]: DECRETO
+              - text: LEGISLATIVO 7 agosto 2026, n. 148 - Normattiva
+          - paragraph [ref=e202]: 11 Aug 2026 · DECRETO LEGISLATIVO 7 agosto 2026, n. 148 Disposizioni integrative e correttive in materia di imposte sui redditi, …
+        - listitem [ref=e203]:
+          - link "Some results have been removed" [ref=e205] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b39f2420bb75c8364ca96a46593e31cf403eecc721e3634b034a691c7376dd38JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+        - listitem [ref=e206]:
+          - navigation "More results for site:gazzettaufficiale.it \"Decreto-Legge 31 ottobre 2025, n. 159\"":
+            - list:
+              - listitem [ref=e207]:
+                - generic "Page 1" [ref=e208]: "1"
+              - listitem [ref=e209]:
+                - link "Page 2" [ref=e210] [cursor=pointer]:
+                  - /url: /search?q=site%3agazzettaufficiale.it+%22Decreto-Legge+31+ottobre+2025%2c+n.+159%22&FPIG=4D1EB6A512DD4B96B7A8B3E71755ADB8&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=e211]:
+                - link "Page 3" [ref=e212] [cursor=pointer]:
+                  - /url: /search?q=site%3agazzettaufficiale.it+%22Decreto-Legge+31+ottobre+2025%2c+n.+159%22&FPIG=4D1EB6A512DD4B96B7A8B3E71755ADB8&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=e213]:
+                - link "Next page" [ref=e214] [cursor=pointer]:
+                  - /url: /search?q=site%3agazzettaufficiale.it+%22Decreto-Legge+31+ottobre+2025%2c+n.+159%22&FPIG=4D1EB6A512DD4B96B7A8B3E71755ADB8&first=11&FORM=PORE
+    - complementary "Additional Results" [ref=e215]:
+      - list
+    - complementary "Explore More"
+  - contentinfo [ref=e216]:
+    - generic [ref=e217]:
+      - list:
+        - listitem [ref=e218]:
+          - link "Privacy" [ref=e219] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=da8280aff3486a2cd053e87948bde4e458ccf1f1b3875aa610dfee4736816cb8JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=e220]:
+          - link "Terms" [ref=e221] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=30354a09c7c72ac436664914b6e8115c2a6b20c9ab7b611ba59d1b07ce610883JmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=23ee7f9a-b16d-6e43-154d-687fb0f16f2f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1
+        - listitem [ref=e222]:
+          - button "Feedback" [ref=e223] [cursor=pointer]

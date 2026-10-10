@@ -1,0 +1,12 @@
+- generic [active] [ref=f1e1]:
+  - heading "Proxy Error" [level=1] [ref=f1e2]
+  - paragraph [ref=f1e3]:
+    - text: The proxy server received an invalid response from an upstream server. The proxy server could not handle the request
+    - emphasis [ref=f1e4]:
+      - link "GET /web/guest/ricerca" [ref=f1e5] [cursor=pointer]:
+        - /url: /web/guest/ricerca
+    - text: .
+  - paragraph [ref=f1e6]:
+    - text: "Reason:"
+    - strong [ref=f1e7]: Error reading from remote server
+  - paragraph
